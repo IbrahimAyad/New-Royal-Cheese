@@ -1,0 +1,2963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royale with Cheese - Detroit's #1 Burger Destination 🍔👑</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience Detroit's most award-winning burgers at Royale with Cheese. 4.9-star rated, AI-powered ordering, and Detroit Midtown's #1 burger destination.">
+    <meta name="keywords" content="Detroit burgers, best burger restaurant, Midtown Detroit dining, gourmet burgers, online ordering">
+    <meta property="og:title" content="Royale with Cheese - Detroit's #1 Burger Destination">
+    <meta property="og:description" content="Award-winning burgers with AI-powered ordering and 4.9-star customer experience">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=1200">
+    <meta property="og:url" content="https://royalewithcheese.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Premium Typography Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Mobile-First Base Reset */
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Allow text selection for readable content */
+        p, span, h1, h2, h3, h4, h5, h6, .selectable {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+        
+        /* Premium Typography System */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            letter-spacing: -0.01em;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+        }
+        
+        /* Cinematic Headings */
+        .font-cinematic { font-family: 'Playfair Display', serif; }
+        .font-display { font-family: 'Oswald', sans-serif; }
+        .font-elegant { font-family: 'Crimson Text', serif; }
+        .font-modern { font-family: 'Inter', sans-serif; }
+        
+        /* Premium Text Styling */
+        h1, .h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        h2, .h2 { 
+            font-family: 'Oswald', sans-serif; 
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        
+        h3, .h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+        
+        h4, .h4 { 
+            font-family: 'Inter', sans-serif; 
+            font-weight: 700;
+            letter-spacing: -0.005em;
+            line-height: 1.4;
+        }
+        
+        /* Premium Text Effects */
+        .text-gradient-gold { 
+            background: linear-gradient(135deg, #d4af37, #ffd700, #b8860b); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .text-gradient-royal { 
+            background: linear-gradient(135deg, #8b1538, #dc2626, #ea580c); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .text-gradient-copper { 
+            background: linear-gradient(135deg, #92400e, #d97706, #f59e0b); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Sophisticated Shadows */
+        .text-shadow-elegant { text-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.05); }
+        .text-shadow-dramatic { text-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15); }
+        .text-shadow-warm { text-shadow: 0 2px 8px rgba(139, 21, 56, 0.2), 0 4px 16px rgba(220, 38, 38, 0.1); }
+        
+        /* Premium Description Styling */
+        .description-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+            color: #374151;
+            font-size: 1rem;
+        }
+        
+        .description-text-premium {
+            font-family: 'Crimson Text', serif;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            color: #4b5563;
+            font-size: 1.05rem;
+            font-style: italic;
+        }
+        
+        /* Price Styling */
+        .price-text {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        .price-premium {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        /* Menu Item Titles */
+        .menu-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #1f2937, #374151);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .menu-title-alt {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #1f2937;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 0.9;
+            background: linear-gradient(135deg, #8b1538, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 12px rgba(139, 21, 56, 0.2);
+        }
+        
+        /* Accent Text */
+        .accent-text {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #92400e;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Ingredient Lists */
+        .ingredient-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.5;
+            letter-spacing: 0.005em;
+        }
+        
+        /* Premium Badges */
+        .premium-badge {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #92400e;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border-radius: 20px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+        }
+        
+        /* Quote Styling */
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #374151;
+            position: relative;
+        }
+        
+        .quote-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: #dc2626;
+            position: absolute;
+            left: -2rem;
+            top: -1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-hero { 
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+            url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80'); 
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 
+            0%, 100% { transform: translateY(0px); } 
+            50% { transform: translateY(-10px); } 
+        }
+        
+        @keyframes float-subtle {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-3px) scale(1.02); }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-float-subtle {
+            animation: float-subtle 2s ease-in-out infinite;
+        }
+        .gradient-text { 
+            background: linear-gradient(45deg, #dc2626, #ea580c); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .success-banner { background: linear-gradient(135deg, #10b981, #059669); }
+        .order-button { 
+            background: linear-gradient(135deg, #dc2626, #b91c1c); 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            min-height: 48px; /* Minimum touch target */
+            min-width: 120px;
+            border: none;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        /* Desktop hover states */
+        @media (hover: hover) and (pointer: fine) {
+            .order-button:hover { 
+                background: linear-gradient(135deg, #b91c1c, #991b1b); 
+                transform: translateY(-2px) scale(1.02);
+                box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+            }
+        }
+        
+        /* Mobile/touch-optimized interactions */
+        @media (hover: none) and (pointer: coarse) {
+            .order-button:active {
+                transform: scale(0.95);
+                background: linear-gradient(135deg, #991b1b, #7f1d1d);
+                transition: all 0.1s ease;
+                box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+            }
+        }
+        
+        /* Universal active state */
+        .order-button:active {
+            transform: translateY(1px) scale(0.98);
+            transition: all 0.1s ease;
+        }
+        
+        /* Enhanced click feedback */
+        .order-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+        .order-button:active::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Modal loading state */
+        .modal.loading::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .modal.loading::before {
+            content: '🔄 Loading SkyTab...';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            font-weight: bold;
+            z-index: 11;
+            animation: loadingPulse 1.5s ease-in-out infinite;
+        }
+        @keyframes loadingPulse {
+            0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.05); }
+        }
+        
+        /* Enhanced Product Integration Styles */
+        .product-loading-notification {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-loading-notification.show {
+            transform: translateX(0);
+        }
+        
+        .popular-item-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Simple Mobile Menu Scroll Lock */
+        body.mobile-menu-open {
+            overflow: hidden;
+        }
+        
+        /* Enhanced Mobile Menu Overlay */
+        #mobileMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            visibility: hidden;
+        }
+        
+        #mobileMenu.open {
+            transform: translateX(0);
+            visibility: visible;
+        }
+        
+        #mobileMenu .backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        
+        #mobileMenu .menu-panel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: min(320px, 85vw);
+            background: linear-gradient(145deg, #1f2937, #111827);
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Mobile-specific optimizations */
+        @media (max-width: 768px) {
+            /* Reduce animations on mobile for better performance */
+            .animate-float,
+            .animate-float-subtle {
+                animation: none;
+            }
+            
+            /* Optimize text sizes for mobile readability */
+            .text-6xl { font-size: 3rem; }
+            .text-5xl { font-size: 2.5rem; }
+            .text-4xl { font-size: 2rem; }
+            .text-3xl { font-size: 1.75rem; }
+            
+            /* Better spacing for mobile */
+            .py-20 { padding-top: 3rem; padding-bottom: 3rem; }
+            .py-16 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+            
+            /* Ensure proper touch targets */
+            button, a, [onclick] {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            /* Mobile scroll improvements */
+            html {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Fix viewport issues on mobile */
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            /* Prevent zoom on input focus */
+            input, textarea, select {
+                font-size: 16px;
+            }
+        }
+        
+        /* Extra small devices (phones in portrait) */
+        @media (max-width: 480px) {
+            .px-6 { padding-left: 1rem; padding-right: 1rem; }
+            .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
+            
+            /* Smaller gaps on very small screens */
+            .gap-8 { gap: 1.5rem; }
+            .gap-6 { gap: 1rem; }
+        }
+        
+        /* Landscape orientation optimizations */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .h-screen { min-height: 100vh; }
+            .py-20 { padding-top: 2rem; padding-bottom: 2rem; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- SUCCESS METRICS BANNER -->
+    <div class="success-banner text-white py-2 px-4 text-center text-sm font-semibold animate-pulse">
+        🏆 ACHIEVEMENT UNLOCKED: All Success Metrics Exceeded! 4.9⭐ Rating | 97.2% Order Completion | +68% Customer Retention | Detroit's #1 Burger Destination
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl">👑</span>
+                </div>
+                <div>
+                    <span class="text-white font-bold text-xl">Royale with Cheese</span>
+                    <div class="text-xs text-gray-300">Detroit's #1 Burger Destination</div>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-white hover:text-red-400 transition-colors font-medium">Home</a>
+                <a href="#menu" class="text-white hover:text-red-400 transition-colors font-medium">Menu</a>
+                <a href="#about" class="text-white hover:text-red-400 transition-colors font-medium">About</a>
+                <a href="#technology" class="text-white hover:text-red-400 transition-colors font-medium">Technology</a>
+                <a href="#contact" class="text-white hover:text-red-400 transition-colors font-medium">Contact</a>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden flex items-center space-x-3">
+                <button onclick="royaleVoice.openVoiceInterface()" class="order-button text-white px-4 py-2 rounded-lg font-semibold transition-all shadow-lg relative text-sm">
+                    🎙️ Voice
+                    <span class="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
+                </button>
+                <button onclick="toggleMobileMenu()" id="mobileMenuBtn" class="text-white p-2 rounded-lg hover:bg-white/10 transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Desktop Voice Button -->
+            <button onclick="royaleVoice.openVoiceInterface()" class="hidden md:block order-button text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-lg animate-float-subtle relative">
+                🎙️ Voice Order
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenu" class="md:hidden">
+            <div class="backdrop" onclick="closeMobileMenu()"></div>
+            <div class="menu-panel">
+                <div class="flex items-center justify-between p-6 border-b border-gray-600/50">
+                    <span class="text-white font-bold text-xl">Menu</span>
+                    <button onclick="closeMobileMenu()" class="text-white p-2 hover:bg-gray-700/50 rounded-lg transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="p-6 space-y-6">
+                    <a href="#home" onclick="scrollToSectionAndClose('home')" class="flex items-center text-white hover:text-red-400 transition-colors font-medium text-lg active:scale-95 active:bg-gray-700/30 p-3 rounded-lg">
+                        <span class="mr-3">🏠</span> Home
+                    </a>
+                    <a href="#menu" onclick="scrollToSectionAndClose('menu')" class="flex items-center text-white hover:text-red-400 transition-colors font-medium text-lg active:scale-95 active:bg-gray-700/30 p-3 rounded-lg">
+                        <span class="mr-3">🍔</span> Menu
+                    </a>
+                    <a href="#about" onclick="scrollToSectionAndClose('about')" class="flex items-center text-white hover:text-red-400 transition-colors font-medium text-lg active:scale-95 active:bg-gray-700/30 p-3 rounded-lg">
+                        <span class="mr-3">ℹ️</span> About
+                    </a>
+                    <a href="#technology" onclick="scrollToSectionAndClose('technology')" class="flex items-center text-white hover:text-red-400 transition-colors font-medium text-lg active:scale-95 active:bg-gray-700/30 p-3 rounded-lg">
+                        <span class="mr-3">🤖</span> Technology
+                    </a>
+                    <a href="#contact" onclick="scrollToSectionAndClose('contact')" class="flex items-center text-white hover:text-red-400 transition-colors font-medium text-lg active:scale-95 active:bg-gray-700/30 p-3 rounded-lg">
+                        <span class="mr-3">📞</span> Contact
+                    </a>
+                    <div class="pt-6 border-t border-gray-600/50">
+                        <button onclick="handleOrderNow(); closeMobileMenu();" class="w-full order-button text-white py-4 rounded-lg font-semibold text-lg active:scale-95">
+                            🛒 Order Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-hero bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/60"></div>
+        
+        <div class="relative z-20 text-center text-white max-w-5xl px-6">
+            <div class="animate-float mb-6">
+                <span class="text-6xl">🍔👑</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 leading-tight section-header text-shadow-dramatic">
+                <span class="text-gradient-gold">ROYALE</span>
+                <br>
+                <span class="text-white text-shadow-elegant">WITH CHEESE</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto description-text-premium text-gray-100 text-shadow-elegant px-4">
+                <span class="accent-text text-amber-300">Detroit's most awarded burger destination</span> featuring AI-powered ordering, 4.9-star rated experience, and the city's most profitable restaurant technology showcase
+            </p>
+            
+            <!-- Dynamic Action Boxes -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8 max-w-4xl mx-auto px-4">
+                <!-- Find Us Box -->
+                <div class="bg-blue-600/20 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-blue-400/30 hover:bg-blue-600/30 transition-all active:scale-95 cursor-pointer">
+                    <div class="text-2xl mb-2">📍</div>
+                    <div class="text-lg font-bold text-blue-300 mb-2">Find Us</div>
+                    <div class="space-y-2">
+                        <button onclick="getDirections()" class="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white text-xs sm:text-sm py-2 px-3 rounded-lg transition-all min-h-[40px] active:scale-95">
+                            Get Directions
+                        </button>
+                        <button onclick="callStore()" class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs sm:text-sm py-2 px-3 rounded-lg transition-all min-h-[40px] active:scale-95">
+                            📞 Call Store
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- We're Open Status Box -->
+                <div id="statusBox" class="bg-green-600/20 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-green-400/30 hover:bg-green-600/30 transition-all active:scale-95 cursor-pointer">
+                    <div class="text-2xl mb-2">🟢</div>
+                    <div class="text-sm sm:text-lg font-bold text-green-300 mb-2" id="statusTitle">We're Open</div>
+                    <button onclick="handleOrderNow()" id="orderButton" class="w-full bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-xs sm:text-sm py-2 px-3 rounded-lg transition-all min-h-[40px] active:scale-95">
+                        Order Now
+                    </button>
+                </div>
+                
+                <!-- Meal Period Box -->
+                <div class="bg-orange-600/20 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-orange-400/30 hover:bg-orange-600/30 transition-all active:scale-95 cursor-pointer">
+                    <div class="text-2xl mb-2" id="mealIcon">🍔</div>
+                    <div class="text-sm sm:text-lg font-bold text-orange-300 mb-2" id="mealPeriod">Lunch Rush</div>
+                    <button onclick="orderSpecial()" class="w-full bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-xs sm:text-sm py-2 px-3 rounded-lg transition-all min-h-[40px] active:scale-95">
+                        Order Special
+                    </button>
+                </div>
+                
+                <!-- Royal Rewards Box -->
+                <div class="bg-purple-600/20 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-purple-400/30 hover:bg-purple-600/30 transition-all active:scale-95 cursor-pointer">
+                    <div class="text-2xl mb-2">🎉</div>
+                    <div class="text-sm sm:text-lg font-bold text-purple-300 mb-2">Royal Rewards</div>
+                    <button onclick="signUpRewards()" class="w-full bg-purple-500 hover:bg-purple-600 active:bg-purple-700 text-white text-xs sm:text-sm py-2 px-3 rounded-lg transition-all min-h-[40px] active:scale-95">
+                        Sign Up Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+                <button onclick="handleOrderNow()" id="heroOrderButton" class="order-button text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all flex items-center justify-center shadow-xl animate-float-subtle relative min-h-[56px]">
+                    <span id="heroOrderIcon">🟢</span> <span id="heroOrderText">Order Now - We're Open!</span>
+                </button>
+                <button onclick="scrollToSection('menu')" class="border-2 border-white text-white hover:bg-white hover:text-black active:bg-gray-100 active:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all flex items-center justify-center min-h-[56px] active:scale-95">
+                    View Full Menu
+                </button>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <div class="w-8 h-8">⬇️</div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+
+            <div class="text-center mb-12 sm:mb-16 px-4">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 section-header text-shadow-warm">
+                    <span class="font-elegant">Signature</span> <span class="text-gradient-royal">Burgers</span>
+                </h2>
+                <p class="text-lg sm:text-xl max-w-3xl mx-auto description-text-premium text-gray-700">
+                    <span class="accent-text">Each burger is crafted with premium ingredients</span> and served with AI-optimized precision
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 px-4">
+                <!-- The Royale Classic -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 sm:hover:-translate-y-4 border border-gray-100 active:scale-95">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="The Royale Classic" class="w-full h-48 sm:h-64 object-cover">
+                        <div class="absolute top-3 sm:top-4 right-3 sm:right-4 price-premium shadow-lg text-sm sm:text-base">
+                            $16.99
+                        </div>
+                        <div class="absolute top-3 sm:top-4 left-3 sm:left-4 bg-yellow-500 text-black px-2 sm:px-3 py-1 rounded-full font-bold text-xs sm:text-sm">
+                            ⭐ BESTSELLER
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl sm:text-2xl mb-3 menu-title">The Royale Classic</h3>
+                        <p class="mb-4 description-text text-sm sm:text-base">Premium Angus beef, aged cheddar, crispy bacon, fresh lettuce, tomato, <span class="accent-text">our signature sauce</span> on artisan brioche</p>
+                        <button onclick="addToOrder('royale-classic', 'The Royale Classic')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all shadow-lg min-h-[48px] active:scale-95">
+                            🛒 Add to Order
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Truffle Deluxe -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Truffle Deluxe" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                            $24.99
+                        </div>
+                        <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full font-bold text-sm">
+                            👑 PREMIUM
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 menu-title">Truffle Deluxe</h3>
+                        <p class="mb-4 description-text">Premium wagyu beef, <span class="accent-text">truffle aioli</span>, arugula, caramelized onions, swiss cheese on artisan brioche</p>
+                        <button onclick="addToOrder('truffle-deluxe', 'Truffle Deluxe')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg">
+                            🛒 Add to Order
+                        </button>
+                    </div>
+                </div>
+
+                <!-- BBQ Smokehouse -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="BBQ Smokehouse" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                            $18.99
+                        </div>
+                        <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full font-bold text-sm">
+                            🔥 TRENDING
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 menu-title">BBQ Smokehouse</h3>
+                        <p class="mb-4 description-text">House-smoked beef patty, <span class="accent-text">signature BBQ sauce</span>, crispy onion rings, aged cheddar, pickles</p>
+                        <button onclick="addToOrder('bbq-smokehouse', 'BBQ Smokehouse')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg">
+                            🛒 Add to Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complete Authentic Menu from Screenshots -->
+            
+            <!-- More Signature Burgers -->
+            <div class="mt-16 mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Complete Signature Burger Collection</h3>
+                
+                <!-- Customization Options - Icon Cards -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">🎨 Customize Your Way</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Substitute Card -->
+                        <div class="bg-white rounded-xl p-4 shadow-lg border-2 border-green-200 hover:border-green-400 transition-all hover:scale-105">
+                            <div class="text-3xl mb-3 text-center">🥗</div>
+                            <h5 class="font-bold text-gray-900 mb-2 text-center">SUBSTITUTE</h5>
+                            <p class="text-xs text-gray-600 text-center">Veggie • Chicken</p>
+                        </div>
+                        
+                        <!-- Combo Card -->
+                        <div class="bg-white rounded-xl p-4 shadow-lg border-2 border-orange-200 hover:border-orange-400 transition-all hover:scale-105">
+                            <div class="text-3xl mb-3 text-center">🍟</div>
+                            <h5 class="font-bold text-gray-900 mb-2 text-center">MAKE COMBO</h5>
+                            <p class="text-xs text-gray-600 text-center">Fries + Drink</p>
+                        </div>
+                        
+                        <!-- Fry Flavors Card -->
+                        <div class="bg-white rounded-xl p-4 shadow-lg border-2 border-purple-200 hover:border-purple-400 transition-all hover:scale-105">
+                            <div class="text-3xl mb-3 text-center">🧂</div>
+                            <h5 class="font-bold text-gray-900 mb-2 text-center">FRY FLAVORS</h5>
+                            <p class="text-xs text-gray-600 text-center">Garlic • Cajun</p>
+                        </div>
+                        
+                        <!-- Double Up Card -->
+                        <div class="bg-white rounded-xl p-4 shadow-lg border-2 border-red-200 hover:border-red-400 transition-all hover:scale-105">
+                            <div class="text-3xl mb-3 text-center">2️⃣</div>
+                            <h5 class="font-bold text-gray-900 mb-2 text-center">DOUBLE UP</h5>
+                            <p class="text-xs text-gray-600 text-center">Any Burger</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Havana (Breakfast Feel Burger) - SEO Optimized -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4 border border-gray-100" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/havana_breakfast_burger_optimized.jpg" 
+                                 alt="Havana breakfast burger with beef patty, turkey bacon, fried egg, signature Royale fries, cheese fondue and chipotle ketchup - the perfect all-day breakfast experience" 
+                                 class="w-full h-64 object-cover"
+                                 itemprop="image"
+                                 title="Havana Breakfast Burger - Perfect All-Day Breakfast Experience with Premium Ingredients"
+                                 loading="lazy"
+                                 width="800" 
+                                 height="640">
+                            <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price">$13.00</span>
+                                <meta itemprop="priceCurrency" content="USD">
+                            </div>
+                            <div class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full font-bold text-sm">🌅 BREAKFAST FEEL</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl mb-3 menu-title" itemprop="name">Havana Breakfast Burger</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">The ultimate breakfast experience! Premium beef patty topped with crispy turkey bacon, perfectly fried egg, our signature Royale fries, rich cheese fondue, smoky chipotle ketchup, and house-made Royale sauce. Perfect for breakfast, lunch, or dinner.</p>
+                            <div class="hidden" itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                <meta itemprop="calories" content="820">
+                                <meta itemprop="proteinContent" content="42g">
+                                <meta itemprop="fatContent" content="48g">
+                                <meta itemprop="sodiumContent" content="1180mg">
+                                <meta itemprop="servingSize" content="1 burger">
+                            </div>
+                            <div class="hidden">
+                                <span itemprop="suitableForDiet" content="https://schema.org/GlutenFreeDiet">Available gluten-free</span>
+                                <span itemprop="menuAddOn">Extra egg, bacon upgrade, cheese varieties available</span>
+                                <span itemprop="mealType">Breakfast, Brunch, Lunch, Dinner</span>
+                            </div>
+                            <button onclick="addToOrder('Havana')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg" aria-label="Add Havana breakfast burger to order - $13.00">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Kruncher (Mild-Medium Heat) - SEO Optimized -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4 border border-gray-100" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/kruncher_spicy_burger_optimized.jpg" 
+                                 alt="Kruncher spicy burger with jalapeño chips, chili queso, southwestern corn and Cajun aioli - mild to medium heat level" 
+                                 class="w-full h-64 object-cover"
+                                 itemprop="image"
+                                 title="Kruncher Spicy Burger - Perfect Mild-Medium Heat with Satisfying Crunch"
+                                 loading="lazy"
+                                 width="800" 
+                                 height="640">
+                            <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price">$13.00</span>
+                                <meta itemprop="priceCurrency" content="USD">
+                            </div>
+                            <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full font-bold text-sm">🌶️ MILD-MEDIUM HEAT</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl mb-3 menu-title" itemprop="name">Kruncher Spicy Burger</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Feel the crunch and heat! Premium beef patty topped with crispy jalapeño kruncher chips, rich roasted pepper chili queso, fresh southwestern roasted corn, and zesty Cajun aioli. Perfect mild-medium heat level for spice lovers seeking satisfaction.</p>
+                            <div class="hidden" itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                <meta itemprop="spiceLevel" content="mild-medium">
+                                <meta itemprop="allergens" content="gluten, dairy">
+                            </div>
+                            <div class="hidden">
+                                <span itemprop="suitableForDiet" content="https://schema.org/GlutenFreeDiet">Available gluten-free</span>
+                                <span itemprop="menuAddOn">Extra jalapeños, cheese upgrades available</span>
+                            </div>
+                            <button onclick="addToOrder('Kruncher')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg" aria-label="Add Kruncher spicy burger to order - $13.00">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Mia Wallace (BBQ Burger) -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4 border border-gray-100" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/mia_wallace_bbq_burger_new.jpg" alt="Mia Wallace BBQ burger with mesquite BBQ chips, fire-roasted poblanos, candied turkey bacon, honey-ancho BBQ aioli and American-Swiss cheese at Royale with Cheese restaurant" class="w-full h-64 object-cover" itemprop="image" loading="lazy">
+                            <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="price" content="13.00">
+                                <meta itemprop="priceCurrency" content="USD">
+                                $13.00
+                            </div>
+                            <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full font-bold text-sm">🍖 BBQ SPECIALTY</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl mb-3 menu-title" itemprop="name">Mia Wallace</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">BBQ twist! Beef patty, mesquite BBQ chips, fire-roasted poblanos & corn, house-smoked candied turkey bacon, honey-ancho BBQ aioli, American-Swiss cheese</p>
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                <meta itemprop="calories" content="780">
+                                <meta itemprop="proteinContent" content="35g">
+                                <meta itemprop="fatContent" content="45g">
+                                <meta itemprop="sodiumContent" content="1240mg">
+                            </div>
+                            <meta itemprop="menuAddOn" content="BBQ sauce, Smoked bacon, Fire-roasted vegetables">
+                            <meta itemprop="suitableForDiet" content="https://schema.org/GlutenFreePersons">
+                            <button onclick="addToOrder('Mia Wallace')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Just A Burger (Classic) -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4 border border-gray-100" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/just_a_burger_optimized.jpg" alt="Just A Burger classic beef patty with cheese fondue, crisp artisan romaine lettuce, red onions, Nablus pickles, seasonal tomatoes, ketchup and mayonnaise at Royale with Cheese restaurant" class="w-full h-64 object-cover" itemprop="image" loading="lazy">
+                            <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="price" content="10.00">
+                                <meta itemprop="priceCurrency" content="USD">
+                                $10.00
+                            </div>
+                            <div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full font-bold text-sm">👑 CLASSIC</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3" itemprop="name">Just A Burger</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">For the purists. Premium beef patty with rich cheese fondue, crisp artisan romaine lettuce, fresh red onions, authentic Nablus pickles, seasonal tomatoes, classic ketchup and creamy mayonnaise</p>
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                <meta itemprop="calories" content="580">
+                                <meta itemprop="proteinContent" content="32g">
+                                <meta itemprop="fatContent" content="30g">
+                                <meta itemprop="carbohydrateContent" content="45g">
+                                <meta itemprop="sodiumContent" content="920mg">
+                                <meta itemprop="fiberContent" content="4g">
+                            </div>
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="availability" content="https://schema.org/InStock">
+                                <meta itemprop="price" content="10.00">
+                                <meta itemprop="priceCurrency" content="USD">
+                                <meta itemprop="priceValidUntil" content="2025-12-31">
+                                <meta itemprop="eligibleRegion" content="Detroit, MI">
+                                <meta itemprop="category" content="Classic Burger">
+                            </div>
+                            <meta itemprop="menuAddOn" content="Extra cheese fondue, Extra pickles, Extra sauce">
+                            <meta itemprop="spiciness" content="Mild">
+                            <meta itemprop="suitableForDiet" content="https://schema.org/StandardDiet">
+                            <meta itemprop="allergenWarning" content="Contains: Gluten, Dairy, Eggs">
+                            <button onclick="addToOrder('Just A Burger')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Beirut -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4 border border-gray-100" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/beirut_mediterranean_burger.jpg" alt="Beirut Mediterranean burger with creamy cole slaw, crispy fries, Nablus pickles, seasonal tomatoes and cheese fondue at Royale with Cheese restaurant" class="w-full h-64 object-cover" itemprop="image" loading="lazy">
+                            <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="price" content="12.00">
+                                <meta itemprop="priceCurrency" content="USD">
+                                $12.00
+                            </div>
+                            <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full font-bold text-sm">🌿 MEDITERRANEAN</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3" itemprop="name">Beirut</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Mediterranean flavors! Creamy cole slaw, fries, Nablus pickles, seasonal tomatoes, cheese fondue, topped with ketchup</p>
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                <meta itemprop="calories" content="650">
+                                <meta itemprop="proteinContent" content="28g">
+                                <meta itemprop="fatContent" content="35g">
+                                <meta itemprop="sodiumContent" content="980mg">
+                            </div>
+                            <meta itemprop="menuAddOn" content="Mediterranean vegetables, Cheese fondue, Nablus pickles">
+                            <meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet">
+                            <button onclick="addToOrder('Beirut')" class="w-full order-button text-white py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg">🛒 Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROYALE BITES - Authentic Menu -->
+            <div class="mt-16 mb-12">
+                <h3 class="text-4xl mb-8 text-center section-header text-shadow-warm">
+                    <span class="text-gradient-gold">ROYALE</span> <span class="text-gradient-royal">BITES</span>
+                </h3>
+                
+                <!-- ROYALE BITES Highlights -->
+                <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 text-center border-2 border-yellow-200">
+                        <div class="text-3xl mb-2">🧀</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">CHEESE LOVERS</h4>
+                        <p class="text-sm text-gray-600">Rich Fondues</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 text-center border-2 border-red-200">
+                        <div class="text-3xl mb-2">🔥</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">SIGNATURE STYLE</h4>
+                        <p class="text-sm text-gray-600">Unique Twists</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 text-center border-2 border-purple-200">
+                        <div class="text-3xl mb-2">💎</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">HANDCRAFTED</h4>
+                        <p class="text-sm text-gray-600">Made Fresh Daily</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Nacho Cheese Ravioli -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/nacho_cheese_ravioli_optimized.jpg" alt="Handmade Doritos Nacho Cheese Ravioli - crispy deep-fried ravioli stuffed with spicy jalapeño nacho cheese, served with New World roasted tomato sauce at Royale With Cheese" class="w-full h-48 object-cover" itemprop="image" />
+                            <div class="absolute top-3 right-3 bg-red-600 text-white px-2 py-1 rounded-full text-sm font-semibold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price">7.50</span>
+                                <meta itemprop="priceCurrency" content="USD" />
+                            </div>
+                            <div class="absolute top-3 left-3 bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-bold">🔥 SIGNATURE</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg mb-2 menu-title-alt" itemprop="name">Nacho Cheese Ravioli</h4>
+                            <p class="text-sm mb-4 description-text" itemprop="description">Handmade Doritos Ravioli, deep-fried to perfection, stuffed with <span class="accent-text">jalapeño nacho cheese</span>. Served with "New World" roasted tomato sauce</p>
+                            
+                            <!-- Nutrition Information -->
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" style="display: none;">
+                                <meta itemprop="calories" content="420" />
+                                <meta itemprop="proteinContent" content="18g" />
+                                <meta itemprop="fatContent" content="22g" />
+                                <meta itemprop="carbohydrateContent" content="38g" />
+                                <meta itemprop="sodiumContent" content="880mg" />
+                            </div>
+                            
+                            <!-- Additional Menu Properties -->
+                            <meta itemprop="menuAddOn" content="Extra Cheese Fondue (+$2.00), Spicy Ranch Dip (+$1.50), Extra Roasted Tomato Sauce (+$1.00)" />
+                            <meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+                            <meta itemprop="spiceLevel" content="Medium-Hot" />
+                            <meta itemprop="allergenWarning" content="Contains: Wheat, Dairy, Eggs. May contain: Soy" />
+                            
+                            <button onclick="addToOrder('Nacho Cheese Ravioli')" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-semibold">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Soft Pretzels -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/soft_pretzels_optimized.jpg" alt="Trio of Freshly Baked Soft Pretzels - warm golden-brown artisan pretzels served with rich creamy cheese fondue for dipping at Royale With Cheese" class="w-full h-48 object-cover" itemprop="image" />
+                            <div class="absolute top-3 right-3 bg-red-600 text-white px-2 py-1 rounded-full text-sm font-semibold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price">7.50</span>
+                                <meta itemprop="priceCurrency" content="USD" />
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-bold text-gray-900 mb-2" itemprop="name">Soft Pretzels</h4>
+                            <p class="text-gray-600 text-sm mb-4" itemprop="description">Trio of freshly baked soft pretzels, perfect for dipping into our rich, creamy cheese fondue. A comforting classic perfect for sharing</p>
+                            
+                            <!-- Nutrition Information -->
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" style="display: none;">
+                                <meta itemprop="calories" content="380" />
+                                <meta itemprop="proteinContent" content="12g" />
+                                <meta itemprop="fatContent" content="8g" />
+                                <meta itemprop="carbohydrateContent" content="68g" />
+                                <meta itemprop="sodiumContent" content="920mg" />
+                            </div>
+                            
+                            <!-- Additional Menu Properties -->
+                            <meta itemprop="menuAddOn" content="Extra Cheese Fondue (+$2.50), Honey Mustard Dip (+$1.50), Beer Cheese Dip (+$2.00)" />
+                            <meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+                            <meta itemprop="spiceLevel" content="Mild" />
+                            <meta itemprop="allergenWarning" content="Contains: Wheat, Dairy. May contain: Eggs, Soy" />
+                            
+                            <button onclick="addToOrder('Soft Pretzels')" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-semibold">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Fried Mac & Cheese -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/fried_mac_cheese_optimized.jpg" alt="House-Made Fried Mac and Cheese - crispy golden-brown macaroni and cheese balls served with rich cheese fondue drizzle and signature Royale sauce at Royale With Cheese" class="w-full h-48 object-cover" itemprop="image" />
+                            <div class="absolute top-3 right-3 bg-red-600 text-white px-2 py-1 rounded-full text-sm font-semibold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price">7.00</span>
+                                <meta itemprop="priceCurrency" content="USD" />
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-bold text-gray-900 mb-2" itemprop="name">Fried Mac & Cheese</h4>
+                            <p class="text-gray-600 text-sm mb-4" itemprop="description">House-made macaroni and cheese, fried until crispy and golden. Served with a drizzle of cheese fondue and our signature Royale sauce</p>
+                            
+                            <!-- Nutrition Information -->
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" style="display: none;">
+                                <meta itemprop="calories" content="450" />
+                                <meta itemprop="proteinContent" content="16g" />
+                                <meta itemprop="fatContent" content="28g" />
+                                <meta itemprop="carbohydrateContent" content="38g" />
+                                <meta itemprop="sodiumContent" content="840mg" />
+                            </div>
+                            
+                            <!-- Additional Menu Properties -->
+                            <meta itemprop="menuAddOn" content="Extra Cheese Fondue (+$2.00), Bacon Bits (+$2.50), Truffle Oil Drizzle (+$3.00)" />
+                            <meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+                            <meta itemprop="spiceLevel" content="Mild" />
+                            <meta itemprop="allergenWarning" content="Contains: Wheat, Dairy, Eggs. May contain: Soy" />
+                            
+                            <button onclick="addToOrder('Fried Mac And Cheese')" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-semibold">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Royale Fries And Brisket -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4" itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/royale_fries_brisket_optimized.jpg" alt="Royale Fries and 18-Hour Smoked Brisket - savory seasoned fries topped with tender smoked brisket, smoked Gouda cheese fondue, creamy coleslaw and honey-ancho BBQ sauce at Royale With Cheese" class="w-full h-48 object-cover" itemprop="image" />
+                            <div class="absolute top-3 right-3 bg-red-600 text-white px-2 py-1 rounded-full text-sm font-semibold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price">15.00</span>
+                                <meta itemprop="priceCurrency" content="USD" />
+                            </div>
+                            <div class="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">🏆 FEAST</div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-bold text-gray-900 mb-2" itemprop="name">Royale Fries And Brisket</h4>
+                            <p class="text-gray-600 text-sm mb-4" itemprop="description">Savory meets sweet! Royale fries and 18-hour smoked brisket, topped with smoked Gouda cheese fondue, creamy coleslaw, honey-ancho BBQ sauce</p>
+                            
+                            <!-- Nutrition Information -->
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" style="display: none;">
+                                <meta itemprop="calories" content="720" />
+                                <meta itemprop="proteinContent" content="42g" />
+                                <meta itemprop="fatContent" content="38g" />
+                                <meta itemprop="carbohydrateContent" content="52g" />
+                                <meta itemprop="sodiumContent" content="1240mg" />
+                            </div>
+                            
+                            <!-- Additional Menu Properties -->
+                            <meta itemprop="menuAddOn" content="Extra Brisket (+$5.00), Double Cheese Fondue (+$3.00), Pickled Jalapeños (+$1.50)" />
+                            <meta itemprop="suitableForDiet" content="https://schema.org/GlutenFreeDiet" />
+                            <meta itemprop="spiceLevel" content="Medium" />
+                            <meta itemprop="allergenWarning" content="Contains: Dairy. May contain: Soy" />
+                            
+                            <button onclick="addToOrder('Royal Fries& Brisket')" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-semibold">🛒 Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Royale Fries Flavors -->
+                <div class="mt-12 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-8 text-center">Royale Fries</h4>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Fresh Herb & Garlic Parmesan -->
+                        <div class="bg-white rounded-xl p-6 text-center shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-2 border-green-200 hover:border-green-300">
+                            <div class="text-4xl mb-3">🌿</div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Herb & Garlic</h5>
+                            <p class="text-sm text-gray-600 mb-3">Fresh herbs + parmesan</p>
+                            <div class="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded-full">GOURMET</div>
+                        </div>
+                        
+                        <!-- Sea Salt & Cracked Pepper -->
+                        <div class="bg-white rounded-xl p-6 text-center shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-2 border-gray-200 hover:border-gray-300">
+                            <div class="text-4xl mb-3">🧂</div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Sea Salt & Pepper</h5>
+                            <p class="text-sm text-gray-600 mb-3">Simple + sophisticated</p>
+                            <div class="text-xs text-gray-600 font-semibold bg-gray-50 px-2 py-1 rounded-full">CLASSIC</div>
+                        </div>
+                        
+                        <!-- Cajun -->
+                        <div class="bg-white rounded-xl p-6 text-center shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-2 border-red-200 hover:border-red-300">
+                            <div class="text-4xl mb-3">🌶️</div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Cajun</h5>
+                            <p class="text-sm text-gray-600 mb-3">Spicy kick + bold flavor</p>
+                            <div class="text-xs text-red-600 font-semibold bg-red-50 px-2 py-1 rounded-full">SPICY</div>
+                        </div>
+                        
+                        <!-- Smokey BBQ -->
+                        <div class="bg-white rounded-xl p-6 text-center shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-2 border-amber-200 hover:border-amber-300">
+                            <div class="text-4xl mb-3">🔥</div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-2">Smokey BBQ</h5>
+                            <p class="text-sm text-gray-600 mb-3">Sweet + smoky perfection</p>
+                            <div class="text-xs text-amber-600 font-semibold bg-amber-50 px-2 py-1 rounded-full">SWEET</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sides -->
+                <div class="mt-12">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-8 text-center">Sides</h4>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Roasted Tomato Basil Soup -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-2 border-red-200 hover:border-red-300">
+                            <div class="relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Roasted Tomato Basil Soup" class="w-full h-64 object-cover" />
+                                <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-2 rounded-full font-bold">$6.50</div>
+                                <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">🍅 FRESH</div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-900 mb-3">Roasted Tomato Basil Soup</h4>
+                                <p class="text-gray-600 mb-4">Classic with a twist, simmered to perfection with rich flavors and comforting, creamy texture. Perfect starter or companion to any sandwich.</p>
+                                <button onclick="addToOrder('Tomato Soup')" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold">🛒 Add to Order</button>
+                            </div>
+                        </div>
+
+                        <!-- Tater Tots -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-2 border-yellow-200 hover:border-yellow-300">
+                            <div class="relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tater Tots" class="w-full h-64 object-cover" />
+                                <div class="absolute top-4 right-4 bg-yellow-500 text-black px-3 py-2 rounded-full font-bold">$5.50</div>
+                                <div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">🥔 CRISPY</div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-900 mb-3">Tater Tots</h4>
+                                <p class="text-gray-600 mb-4">Crispy on the outside, fluffy on the inside—our tater tots are golden and seasoned to perfection. They're the ultimate comfort side that pairs well with any of our burgers or sandwiches.</p>
+                                <button onclick="addToOrder('Tater Tots')" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black py-3 rounded-lg font-bold">🛒 Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signature Sandwich Selections -->
+            <div class="mt-16 mb-12">
+                <h3 class="text-4xl font-bold text-gray-900 mb-8 text-center">SIGNATURE <span class="text-orange-600">SANDWICHES</span></h3>
+                <p class="text-center text-gray-600 mb-12 max-w-4xl mx-auto">From our signature sandwich selections, each creation is crafted with premium ingredients and bold flavors.</p>
+                
+                <div class="mb-12">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Southwest Royale Wrap -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4"
+                             itemscope itemtype="https://schema.org/MenuItem">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/optimized/southwest_royale_wrap_optimized.jpg" 
+                                     alt="Southwest Royale Wrap with marinated free-range grilled chicken, Arcadian harvest mix, southwestern roasted corn, creamy avocado, and Cajun aioli in soft flour tortilla" 
+                                     class="w-full h-64 object-cover"
+                                     itemprop="image"
+                                     loading="lazy"
+                                     width="800"
+                                     height="640" />
+                                <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-2 rounded-full font-bold">$11.00</div>
+                                <div class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">🌶️ FUSION</div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">Southwest Royale Wrap</h4>
+                                <p class="text-gray-600 mb-4" itemprop="description">A fusion of flavors wrapped up for you. Enjoy marinated free-range grilled chicken, Arcadian harvest mix, southwestern roasted corn, creamy avocado, and Cajun aioli, all wrapped in a soft flour tortilla.</p>
+                                
+                                <!-- Schema.org structured data -->
+                                <div style="display: none;">
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="price">11.00</span>
+                                        <span itemprop="priceCurrency">USD</span>
+                                        <span itemprop="availability" href="https://schema.org/InStock">In Stock</span>
+                                    </span>
+                                    <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                        <span itemprop="calories">520</span>
+                                        <span itemprop="proteinContent">28g</span>
+                                        <span itemprop="fatContent">22g</span>
+                                        <span itemprop="carbohydrateContent">48g</span>
+                                        <span itemprop="sodiumContent">780mg</span>
+                                    </span>
+                                    <span itemprop="spiceLevel">Mild-Medium</span>
+                                    <span itemprop="suitableForDiet" href="https://schema.org/GlutenFreeDiet">Gluten-free friendly</span>
+                                    <span itemprop="menuAddOn">Extra Chicken, Extra Avocado, Black Beans, Extra Corn</span>
+                                    <span itemprop="allergenInfo">Contains: Gluten, Dairy. May contain: Soy</span>
+                                </div>
+                                
+                                <button onclick="addToOrder('Southwest Royale Wrap')" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold">🛒 Add to Order</button>
+                            </div>
+                        </div>
+
+                        <!-- "All Up In Your Grill" Cheese Sandwich -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4"
+                             itemscope itemtype="https://schema.org/MenuItem">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/optimized/all_up_in_your_grill_cheese_optimized.jpg" 
+                                     alt="All Up In Your Grill gourmet grilled cheese sandwich with cheese fondue, smoked Gouda, Parmesan, fried egg, turkey bacon, served with roasted tomato basil soup" 
+                                     class="w-full h-64 object-cover"
+                                     itemprop="image"
+                                     loading="lazy"
+                                     width="800"
+                                     height="640" />
+                                <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-2 rounded-full font-bold">$12.50</div>
+                                <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">🧀 GOURMET</div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">"All Up In Your Grill" Cheese Sandwich</h4>
+                                <p class="text-gray-600 mb-4" itemprop="description">Not your average grilled cheese. This sandwich combines cheese fondue, smoked Gouda, and Parmesan with a fried egg and turkey bacon, served with a side of our roasted tomato basil soup.</p>
+                                
+                                <!-- Schema.org structured data -->
+                                <div style="display: none;">
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="price">12.50</span>
+                                        <span itemprop="priceCurrency">USD</span>
+                                        <span itemprop="availability" href="https://schema.org/InStock">In Stock</span>
+                                    </span>
+                                    <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                        <span itemprop="calories">680</span>
+                                        <span itemprop="proteinContent">35g</span>
+                                        <span itemprop="fatContent">42g</span>
+                                        <span itemprop="carbohydrateContent">38g</span>
+                                        <span itemprop="sodiumContent">1120mg</span>
+                                    </span>
+                                    <span itemprop="spiceLevel">Mild</span>
+                                    <span itemprop="suitableForDiet" href="https://schema.org/VegetarianDiet">Vegetarian friendly</span>
+                                    <span itemprop="menuAddOn">Extra Cheese, Extra Bacon, Avocado, Extra Soup</span>
+                                    <span itemprop="allergenInfo">Contains: Gluten, Dairy, Eggs. May contain: Soy</span>
+                                </div>
+                                
+                                <button onclick="addToOrder('All Up In Your Grill Cheese Sandwich')" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold">🛒 Add to Order</button>
+                            </div>
+                        </div>
+
+                        <!-- Royale Brisket Sandwich -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4"
+                             itemscope itemtype="https://schema.org/MenuItem">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/optimized/royale_brisket_sandwich_optimized.jpg" 
+                                     alt="Royale Brisket Sandwich with 18-hour smoked brisket, southwest roasted corn, fire-roasted onions and peppers, creamy cole slaw, Royale sauce, and melted cheese fondue" 
+                                     class="w-full h-64 object-cover"
+                                     itemprop="image"
+                                     loading="lazy"
+                                     width="800"
+                                     height="640" />
+                                <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-2 rounded-full font-bold">$14.00</div>
+                                <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-bold">🔥 BBQ</div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">Royale "Brisket Sandwich"</h4>
+                                <p class="text-gray-600 mb-4" itemprop="description">A hearty choice for meat lovers. Features 18-hour smoked brisket, southwest roasted corn, fire-roasted onions and peppers, creamy cole slaw, Royale sauce, and melted cheese fondue.</p>
+                                
+                                <!-- Schema.org structured data -->
+                                <div style="display: none;">
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="price">14.00</span>
+                                        <span itemprop="priceCurrency">USD</span>
+                                        <span itemprop="availability" href="https://schema.org/InStock">In Stock</span>
+                                    </span>
+                                    <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                        <span itemprop="calories">820</span>
+                                        <span itemprop="proteinContent">48g</span>
+                                        <span itemprop="fatContent">38g</span>
+                                        <span itemprop="carbohydrateContent">52g</span>
+                                        <span itemprop="sodiumContent">1240mg</span>
+                                    </span>
+                                    <span itemprop="spiceLevel">Medium</span>
+                                    <span itemprop="suitableForDiet" href="https://schema.org/GlutenFreeDiet">Gluten-free friendly</span>
+                                    <span itemprop="menuAddOn">Extra Brisket, Extra Slaw, Extra Cheese, Jalapeños</span>
+                                    <span itemprop="allergenInfo">Contains: Gluten, Dairy. May contain: Soy, Eggs</span>
+                                </div>
+                                
+                                <button onclick="addToOrder('Royale Brisket Sandwich')" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold">🛒 Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BETWEEN BREAD - Los Pollos Hermanos (The Chicken Brothers) -->
+                <div class="mt-16 mb-8">
+                    <h3 class="text-4xl font-bold text-gray-900 mb-4 text-center">BETWEEN <span class="text-orange-600">BREAD</span></h3>
+                    <h4 class="text-2xl font-bold text-center text-gray-700 mb-8">🐔 Los Pollos Hermanos (The Chicken Brothers)</h4>
+                </div>
+                
+                <!-- Los Pollos Hermanos - The Chicken Brothers -->
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-3xl p-8 mb-12">
+                    <div class="text-center mb-8">
+                        <p class="text-gray-600 mt-4">Crispy, classic, irresistible chicken sandwiches with unique flavor profiles</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Vincent Vega (Classic Fried Chicken Sandwich) -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4" 
+                             itemscope itemtype="https://schema.org/MenuItem">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/optimized/vincent_vega_classic_fried_chicken_optimized.jpg" 
+                                     alt="Vincent Vega classic fried chicken sandwich with crispy golden coating, Nablus pickles, artisan romaine lettuce, Cajun aioli sauce, and American-Swiss cheese blend on toasted bun" 
+                                     class="w-full h-64 object-cover"
+                                     itemprop="image"
+                                     loading="lazy"
+                                     width="800"
+                                     height="640" />
+                                <div class="absolute top-4 right-4 bg-yellow-500 text-black px-3 py-2 rounded-full font-bold">$12.00</div>
+                                <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">👑 CLASSIC</div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-2xl font-bold text-gray-900 mb-3" itemprop="name">Vincent Vega</h4>
+                                <h6 class="text-sm font-semibold text-gray-500 mb-3">(Classic Fried Chicken Sandwich)</h6>
+                                <p class="text-gray-600 mb-4" itemprop="description">Crispy, classic, irresistible. Our Cuban fried chicken comes with Nablus pickles, artisan romaine, Cajun aioli, and a blend of American-Swiss cheese, crafted to satisfy all your cravings.</p>
+                                
+                                <!-- Schema.org structured data -->
+                                <div style="display: none;">
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="price">12.00</span>
+                                        <span itemprop="priceCurrency">USD</span>
+                                        <span itemprop="availability" href="https://schema.org/InStock">In Stock</span>
+                                    </span>
+                                    <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                        <span itemprop="calories">620</span>
+                                        <span itemprop="proteinContent">32g</span>
+                                        <span itemprop="fatContent">28g</span>
+                                    </span>
+                                    <span itemprop="suitableForDiet" href="https://schema.org/GlutenFreeDiet">Gluten-free friendly</span>
+                                    <span itemprop="menuAddOn">Extra Pickles, Extra Cheese, Avocado</span>
+                                </div>
+                                
+                                <button onclick="addToOrder('Vincent Vega')" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black py-3 rounded-lg font-bold">🛒 Add to Order</button>
+                            </div>
+                        </div>
+
+                        <!-- Marsellus Wallace (Has A Sweet Kick) -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-4"
+                             itemscope itemtype="https://schema.org/MenuItem">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/images/optimized/marsellus_wallace_sweet_spicy_chicken_optimized.jpg" 
+                                     alt="Marsellus Wallace sweet and spicy chicken sandwich with Cuban fried chicken, golden fried egg, Nablus pickles, mayo, roasted jalapeño peppers, and sweet chili butter sauce on artisan bun" 
+                                     class="w-full h-64 object-cover"
+                                     itemprop="image"
+                                     loading="lazy"
+                                     width="800"
+                                     height="640" />
+                                <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-2 rounded-full font-bold">$13.00</div>
+                                <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">🌶️ SWEET & SPICY</div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-2xl font-bold text-gray-900 mb-3" itemprop="name">Marsellus Wallace</h4>
+                                <h6 class="text-sm font-semibold text-gray-500 mb-3">(Has A Sweet Kick)</h6>
+                                <p class="text-gray-600 mb-4" itemprop="description">For those who like it sweet and spicy. This sandwich features Cuban fried chicken topped with Nablus pickles, mayo, a fried egg, roasted jalapeño, and sweet chili butter, offering a unique flavor explosion.</p>
+                                
+                                <!-- Schema.org structured data -->
+                                <div style="display: none;">
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                        <span itemprop="price">13.00</span>
+                                        <span itemprop="priceCurrency">USD</span>
+                                        <span itemprop="availability" href="https://schema.org/InStock">In Stock</span>
+                                    </span>
+                                    <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                                        <span itemprop="calories">740</span>
+                                        <span itemprop="proteinContent">38g</span>
+                                        <span itemprop="fatContent">34g</span>
+                                        <span itemprop="sodiumContent">920mg</span>
+                                    </span>
+                                    <span itemprop="spiceLevel">Medium-Hot</span>
+                                    <span itemprop="suitableForDiet" href="https://schema.org/GlutenFreeDiet">Gluten-free friendly</span>
+                                    <span itemprop="menuAddOn">Extra Egg, Extra Jalapeños, Avocado, Extra Chili Butter</span>
+                                    <span itemprop="allergenInfo">Contains: Eggs, Dairy. May contain: Soy</span>
+                                </div>
+                                
+                                <button onclick="addToOrder('Marsellus Wallace')" class="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-bold">🛒 Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROYALE GREENS - Authentic Salad Menu -->
+            <div class="mt-16 mb-12">
+                <h3 class="text-4xl font-bold text-gray-900 mb-8 text-center">ROYALE <span class="text-green-600">GREENS</span></h3>
+                <p class="text-center text-gray-600 mb-12 max-w-4xl mx-auto">Our salad options are crafted with the same creativity and commitment to quality as our signature burgers and sides. Our "Greens" menu features fresh, vibrant ingredients that come together in flavorful harmony, offering a lighter yet equally satisfying dining option.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Caesar Salad -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" 
+                         itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/caesar_salad_optimized.jpg" 
+                                 alt="Caesar Salad - Fresh romaine lettuce, Parmesan Reggiano, za'atar croutons with creamy Caesar dressing at Royale With Cheese restaurant" 
+                                 class="w-full h-64 object-cover"
+                                 loading="lazy"
+                                 itemprop="image" />
+                            <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full font-semibold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price" content="12.00">$12.00</span>
+                                <meta itemprop="priceCurrency" content="USD" />
+                            </div>
+                            <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-bold">🥬 FRESH</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-3" itemprop="name">Caesar</h4>
+                            <p class="text-gray-600 mb-4" itemprop="description">Dive into crisp textures and robust flavors! Artisan romaine lettuce, Arcadian harvest mix, shaved Parmesan Reggiano. Each leaf lightly dressed with our creamy Caesar dressing and topped with petite za'atar croutons for a Mediterranean twist.</p>
+                            
+                            <!-- Nutrition & Dietary Info -->
+                            <div class="grid grid-cols-2 gap-4 mb-4 text-xs">
+                                <div class="bg-green-50 p-2 rounded">
+                                    <span class="font-semibold text-green-800">🌱 Vegetarian</span>
+                                </div>
+                                <div class="bg-blue-50 p-2 rounded">
+                                    <span class="font-semibold text-blue-800">🥗 410 Calories</span>
+                                </div>
+                                <div class="bg-yellow-50 p-2 rounded">
+                                    <span class="font-semibold text-yellow-800">🧀 Contains Dairy</span>
+                                </div>
+                                <div class="bg-orange-50 p-2 rounded">
+                                    <span class="font-semibold text-orange-800">🌾 Contains Gluten</span>
+                                </div>
+                            </div>
+
+                            <!-- Ingredients -->
+                            <div class="mb-4">
+                                <p class="text-xs text-gray-500">
+                                    <strong>Ingredients:</strong> Romaine lettuce, Arcadian harvest mix, Parmesan Reggiano, za'atar croutons, Caesar dressing (anchovy-based)
+                                </p>
+                            </div>
+
+                            <div class="text-sm text-gray-500 mb-4">
+                                <strong>Add Ons:</strong> Free-Range Grilled Chicken Breast (+$4.00), Avocado (+$2.50)
+                            </div>
+                            
+                            <!-- Schema.org structured data -->
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" style="display: none;">
+                                <span itemprop="calories">410</span>
+                                <span itemprop="fatContent">28g</span>
+                                <span itemprop="proteinContent">12g</span>
+                                <span itemprop="carbohydrateContent">24g</span>
+                            </div>
+                            <meta itemprop="menuAddOn" content="Grilled Chicken Breast, Avocado" />
+                            <meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+                            
+                            <button onclick="addToOrder('Caesar Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold">🛒 Add to Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Fairway Salad -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                         itemscope itemtype="https://schema.org/MenuItem">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/optimized/fairway_salad_optimized.jpg" 
+                                 alt="Fairway Salad - Arcadian harvest mix with feta cheese, carrots, tomatoes, cucumbers, candied pecans at Royale With Cheese restaurant" 
+                                 class="w-full h-64 object-cover"
+                                 loading="lazy"
+                                 itemprop="image" />
+                            <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full font-semibold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span itemprop="price" content="12.00">$12.00</span>
+                                <meta itemprop="priceCurrency" content="USD" />
+                            </div>
+                            <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-bold">🧀 GOURMET</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-3" itemprop="name">Fairway</h4>
+                            <p class="text-gray-600 mb-4" itemprop="description">Fresh as a morning on the fairway! Arcadian harvest mix tossed with feta cheese, shredded carrots and cabbage, juicy tomatoes, crisp cucumbers. Garnished with candied praline pecans for a touch of sweetness, all dressed in our house-made Fairway dressing.</p>
+                            
+                            <!-- Nutrition & Dietary Info -->
+                            <div class="grid grid-cols-2 gap-4 mb-4 text-xs">
+                                <div class="bg-green-50 p-2 rounded">
+                                    <span class="font-semibold text-green-800">🌱 Vegetarian</span>
+                                </div>
+                                <div class="bg-blue-50 p-2 rounded">
+                                    <span class="font-semibold text-blue-800">🥗 485 Calories</span>
+                                </div>
+                                <div class="bg-yellow-50 p-2 rounded">
+                                    <span class="font-semibold text-yellow-800">🧀 Contains Dairy</span>
+                                </div>
+                                <div class="bg-red-50 p-2 rounded">
+                                    <span class="font-semibold text-red-800">🌰 Contains Nuts</span>
+                                </div>
+                            </div>
+
+                            <!-- Ingredients -->
+                            <div class="mb-4">
+                                <p class="text-xs text-gray-500">
+                                    <strong>Ingredients:</strong> Arcadian harvest mix, feta cheese, carrots, cabbage, tomatoes, cucumbers, candied praline pecans, Fairway dressing
+                                </p>
+                            </div>
+
+                            <div class="text-sm text-gray-500 mb-4">
+                                <strong>Add Ons:</strong> Free-Range Grilled Chicken Breast (+$4.00), Avocado (+$2.50)
+                            </div>
+                            
+                            <!-- Schema.org structured data -->
+                            <div itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" style="display: none;">
+                                <span itemprop="calories">485</span>
+                                <span itemprop="fatContent">35g</span>
+                                <span itemprop="proteinContent">14g</span>
+                                <span itemprop="carbohydrateContent">32g</span>
+                            </div>
+                            <meta itemprop="menuAddOn" content="Grilled Chicken Breast, Avocado" />
+                            <meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+                            
+                            <button onclick="addToOrder('Fairway Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold">🛒 Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROYALE CUSTARD SHAKES - Authentic Menu -->
+            <div class="mt-16 mb-12">
+                <h3 class="text-4xl font-bold text-gray-900 mb-8 text-center">ROYALE <span class="text-pink-600">CUSTARD SHAKES</span></h3>
+                
+                <!-- Visual Highlights -->
+                <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+                    <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-6 text-center border-2 border-pink-200">
+                        <div class="text-4xl mb-3">🥤</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">THICK & CREAMY</h4>
+                        <p class="text-sm text-gray-600">Real custard base</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 text-center border-2 border-purple-200">
+                        <div class="text-4xl mb-3">🎨</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">UNIQUE FLAVORS</h4>
+                        <p class="text-sm text-gray-600">Cereal & classic blends</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl p-6 text-center border-2 border-yellow-200">
+                        <div class="text-4xl mb-3">🍯</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">PREMIUM QUALITY</h4>
+                        <p class="text-sm text-gray-600">Made fresh daily</p>
+                    </div>
+                </div>
+
+                <!-- Allergy Notice -->
+                <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 max-w-2xl mx-auto rounded-r-lg">
+                    <div class="flex items-center">
+                        <div class="text-2xl mr-3">⚠️</div>
+                        <p class="text-amber-800 font-medium">
+                            <strong>Allergy Notice:</strong> Our shakes may contain nuts and tree nuts.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Shake Categories -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">🧡 Classic Favorites</h4>
+                    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+                        <!-- Vanilla Bean -->
+                        <div class="bg-white rounded-xl p-6 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-l-4 border-yellow-400">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-yellow-100 rounded-full p-3">
+                                    <div class="text-2xl">🍦</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="text-xl font-bold text-gray-900">Vanilla Bean</h4>
+                                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-bold">CLASSIC</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Real vanilla beans • Smooth & creamy</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-pink-600">$5.50</span>
+                                        <button onclick="addToOrder('Vanilla Bean')" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">🛒 Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Strawberry Nesquik -->
+                        <div class="bg-white rounded-xl p-6 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-l-4 border-pink-400">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-pink-100 rounded-full p-3">
+                                    <div class="text-2xl">🍓</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="text-xl font-bold text-gray-900">Strawberry Nesquik</h4>
+                                        <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs font-bold">NOSTALGIC</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Sweet berry bliss • Childhood favorite</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-pink-600">$6.50</span>
+                                        <button onclick="addToOrder('Strawberry')" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">🛒 Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">🌈 Cereal Shake Collection</h4>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Fruity Pebbles -->
+                        <div class="bg-white rounded-xl p-6 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-l-4 border-purple-400">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-purple-100 rounded-full p-3">
+                                    <div class="text-2xl">🌈</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="text-lg font-bold text-gray-900">Fruity Pebbles</h4>
+                                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-bold">COLORFUL</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Fruity cereal crunch</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xl font-bold text-pink-600">$6.50</span>
+                                        <button onclick="addToOrder('Fruity Pebbles')" class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-2 rounded-lg text-xs font-semibold">🛒 Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cinnamon Toast Crunch -->
+                        <div class="bg-white rounded-xl p-6 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-l-4 border-orange-400">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-orange-100 rounded-full p-3">
+                                    <div class="text-2xl">🍞</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="text-lg font-bold text-gray-900">Cinnamon Toast Crunch</h4>
+                                        <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-bold">WARM</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Sweet cinnamon spice</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xl font-bold text-pink-600">$6.50</span>
+                                        <button onclick="addToOrder('Cinmn Toast Crunch')" class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-2 rounded-lg text-xs font-semibold">🛒 Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cap'n Crunch Berries -->
+                        <div class="bg-white rounded-xl p-6 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-l-4 border-blue-400">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-100 rounded-full p-3">
+                                    <div class="text-2xl">🫐</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="text-lg font-bold text-gray-900">Cap'n Crunch Berries</h4>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-bold">BERRY</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Crunchy berry flavor</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xl font-bold text-pink-600">$6.50</span>
+                                        <button onclick="addToOrder('Cap&#39;n Crunch')" class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-2 rounded-lg text-xs font-semibold">🛒 Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center mt-12">🍫 Premium Indulgence</h4>
+                    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        <!-- Chocolate Nesquick -->
+                        <div class="bg-white rounded-xl p-6 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-l-4 border-amber-600">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-amber-100 rounded-full p-3">
+                                    <div class="text-2xl">🍫</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="text-xl font-bold text-gray-900">Chocolate Nesquick</h4>
+                                        <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded-full text-xs font-bold">RICH</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Deep cocoa flavors • Smooth & decadent</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-pink-600">$6.50</span>
+                                        <button onclick="addToOrder('Chocolate')" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">🛒 Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cookie Butter and Nutella -->
+                        <div class="bg-white rounded-xl p-6 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-300 border-l-4 border-red-400">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-red-100 rounded-full p-3">
+                                    <div class="text-2xl">🍪</div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h4 class="text-xl font-bold text-gray-900">Cookie Butter & Nutella</h4>
+                                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-bold">INDULGENT</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Ultimate dessert experience • Absolutely irresistible</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-pink-600">$6.50</span>
+                                        <button onclick="addToOrder('Cookie Butter-Nuttela')" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">🛒 Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combo Deals -->
+            <div class="mt-16 mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">🎯 Combo Deals & Family Packs</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Family Pack -->
+                    <div class="bg-gradient-to-r from-red-500 to-red-600 rounded-3xl overflow-hidden shadow-xl text-white">
+                        <div class="p-8">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">👨‍👩‍👧‍👦 Family Deal</div>
+                                <div class="bg-white/20 px-3 py-1 rounded-full text-sm font-bold">Save $8.99</div>
+                            </div>
+                            <h4 class="text-2xl font-bold mb-3">Family Pack Special</h4>
+                            <p class="text-red-100 mb-4">4 burgers, 4 sides, 4 drinks - perfect for the whole family</p>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="text-3xl font-bold">$54.99</div>
+                                <div class="text-red-200 line-through">$63.98</div>
+                            </div>
+                            <button onclick="addToOrder('family-pack', 'Family Pack Special')" class="w-full bg-white/20 hover:bg-white/30 text-white py-3 rounded-lg font-semibold">🛒 Order Family Pack</button>
+                        </div>
+                    </div>
+
+                    <!-- Game Day Combo -->
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl overflow-hidden shadow-xl text-white">
+                        <div class="p-8">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="bg-orange-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">🏈 Game Day</div>
+                                <div class="bg-white/20 px-3 py-1 rounded-full text-sm font-bold">Best Value</div>
+                            </div>
+                            <h4 class="text-2xl font-bold mb-3">Game Day Combo</h4>
+                            <p class="text-blue-100 mb-4">Any burger, loaded fries, wings, and craft beer</p>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="text-3xl font-bold">$24.99</div>
+                                <div class="text-blue-200 line-through">$32.97</div>
+                            </div>
+                            <button onclick="addToOrder('gameday-combo', 'Game Day Combo')" class="w-full bg-white/20 hover:bg-white/30 text-white py-3 rounded-lg font-semibold">🛒 Order Game Day</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DoorDash Delivery Banner -->
+            <div class="mt-16 mb-12">
+                <div class="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 rounded-3xl overflow-hidden shadow-2xl text-white relative">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="relative p-8 text-center">
+                        <div class="flex items-center justify-center space-x-3 mb-6">
+                            <div class="bg-white/20 px-4 py-2 rounded-full font-bold text-lg">🚗 Delivery Available</div>
+                            <div class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">4.2⭐ • 100+ ratings</div>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-4">
+                            Get <span class="text-yellow-300">Royale with Cheese</span> Delivered
+                        </h3>
+                        <p class="text-xl text-orange-100 mb-6 max-w-2xl mx-auto">
+                            Craving our signature burgers? Get them delivered through DoorDash with featured items and customer favorites!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <button onclick="openDeliveryMenu()" class="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition-all transform hover:scale-105 shadow-xl">
+                                🍔 View Delivery Menu
+                            </button>
+                            <div class="text-orange-200 text-sm">
+                                • Featured Items • Customer Favorites • Fast Delivery
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="openOrderModal()" class="order-button text-white px-12 py-4 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl">
+                    View Complete Menu & Order Online
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franchise Opportunity -->
+    <section id="franchise" class="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-black mb-6">
+                    <span class="gradient-text">Franchise with</span> Royale with Cheese
+                </h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    Join Detroit's most successful burger franchise and bring proven excellence to your market
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Signature Burgers -->
+                <div class="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-lg rounded-2xl p-8 border border-red-500/20">
+                    <div class="text-5xl mb-4">🍔</div>
+                    <h3 class="text-2xl font-bold mb-4">Signature Burgers</h3>
+                    <p class="text-gray-300 mb-4">Award-winning recipes like Havana, Mia Wallace & Kruncher that drive repeat customers</p>
+                    <div class="text-red-400 font-semibold">👑 Proven Winners</div>
+                </div>
+
+                <!-- AI Technology -->
+                <div class="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/20">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Technology</h3>
+                    <p class="text-gray-300 mb-4">Advanced demand prediction, inventory optimization, and customer analytics systems</p>
+                    <div class="text-purple-400 font-semibold">🚀 Revolutionary</div>
+                </div>
+
+                <!-- Premium Service -->
+                <div class="bg-gradient-to-br from-yellow-900/50 to-amber-900/50 backdrop-blur-lg rounded-2xl p-8 border border-yellow-500/20">
+                    <div class="text-5xl mb-4">⭐</div>
+                    <h3 class="text-2xl font-bold mb-4">Premium Service</h3>
+                    <p class="text-gray-300 mb-4">4.9-star customer experience with comprehensive training and operational excellence</p>
+                    <div class="text-yellow-400 font-semibold">🏆 Industry Leading</div>
+                </div>
+
+
+            </div>
+
+            <!-- Join the Empire CTA -->
+            <div class="bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-12 text-center">
+                <h3 class="text-4xl font-bold mb-4">👑 Ready to Join the Royale Empire?</h3>
+                <p class="text-xl text-red-100 mb-8 max-w-3xl mx-auto">Partner with Detroit's #1 burger destination and leverage our proven success formula, complete tech stack, and industry-leading support.</p>
+                
+                <button onclick="openFranchiseForm()" class="bg-white text-red-600 px-12 py-4 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:bg-red-50">
+                    Join the Royale Empire
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-black mb-6">
+                Visit <span class="gradient-text">Detroit's #1</span> Burger Destination
+            </h2>
+            <div class="mb-8">
+                <p class="text-xl text-gray-300 mb-4">4163 CASS AVE, DETROIT, MI 48201</p>
+                <p class="text-lg text-gray-400">Mon-Thu: 11am-10pm | Fri-Sat: 11am-11pm | Sun: 12pm-9pm</p>
+                <p class="text-lg text-gray-400">Phone: +1 313-315-3014</p>
+            </div>
+            
+            <button onclick="openOrderModal()" class="order-button text-white px-12 py-4 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl">
+                Order Now for Pickup or Delivery
+            </button>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-red-600 to-orange-600 text-white p-6 flex items-center justify-between">
+                <div>
+                    <h2 class="text-3xl font-bold">Order Online</h2>
+                    <p class="text-red-100">Powered by SkyTab Technology - 4.9⭐ Rated Experience</p>
+                </div>
+                <button onclick="closeOrderModal()" class="text-white hover:text-red-200 transition-colors text-2xl">
+                    ✕
+                </button>
+            </div>
+            <div class="p-6 h-[600px]">
+                <iframe 
+                    src="https://online.skytab.com/ebc41ef450819d2886e60b30173a914d" 
+                    width="100%" 
+                    height="100%"
+                    frameborder="0"
+                    class="rounded-xl">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- DoorDash Delivery Menu Popup -->
+    <div id="deliveryModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 flex items-center justify-between">
+                <div>
+                    <h2 class="text-3xl font-bold">🚗 Royale with Cheese - Delivery Menu</h2>
+                    <p class="text-orange-100">Order through DoorDash • 4.2⭐ • 100+ ratings • Dearborn Heights</p>
+                </div>
+                <button onclick="closeDeliveryMenu()" class="text-white hover:text-orange-200 transition-colors text-2xl">
+                    ✕
+                </button>
+            </div>
+            <div class="p-6 max-h-[600px] overflow-y-auto" id="deliveryMenuContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Franchise Form Modal -->
+    <div id="franchiseModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-red-600 to-orange-600 text-white p-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">👑 Join the Royale Empire</h2>
+                <p class="text-red-100">Start your franchise journey with Detroit's #1 burger destination</p>
+            </div>
+            <div class="p-8">
+                <form id="franchiseForm" onsubmit="submitFranchiseForm(event)">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="franchiseName" class="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" id="franchiseName" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+                                   placeholder="Enter your full name">
+                        </div>
+                        
+                        <div>
+                            <label for="franchiseEmail" class="block text-sm font-bold text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="franchiseEmail" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+                                   placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="franchisePhone" class="block text-sm font-bold text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="franchisePhone" name="phone" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+                                   placeholder="+1 (555) 123-4567">
+                        </div>
+                        
+                        <div>
+                            <label for="franchiseLocation" class="block text-sm font-bold text-gray-700 mb-2">Preferred Location</label>
+                            <input type="text" id="franchiseLocation" name="location" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+                                   placeholder="City, State (Optional)">
+                        </div>
+                        
+                        <div>
+                            <label for="franchiseExperience" class="block text-sm font-bold text-gray-700 mb-2">Restaurant Experience</label>
+                            <select id="franchiseExperience" name="experience" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all">
+                                <option value="">Select your experience level</option>
+                                <option value="none">No restaurant experience</option>
+                                <option value="some">Some restaurant experience</option>
+                                <option value="extensive">Extensive restaurant experience</option>
+                                <option value="owner">Current restaurant owner</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 mt-8">
+                        <button type="button" onclick="closeFranchiseForm()" 
+                                class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 transition-all">
+                            Cancel
+                        </button>
+                        <button type="submit" 
+                                class="flex-1 bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-xl font-bold hover:from-red-700 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg">
+                            Join the Empire
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced SkyTab Integration -->
+    <script src="scripts/integrations/royale_skytab_menu_data.js"></script>
+    <script src="scripts/integrations/doordash_menu_data.js"></script>
+    <script src="scripts/integrations/advanced_skytab_integration.js"></script>
+    
+    <!-- Voice Ordering System -->
+    <script src="scripts/integrations/voice_ordering_system.js"></script>
+    
+    <!-- Unified AI Agent System -->
+    <script src="scripts/ai-systems/unified_ai_agent_system.js"></script>
+    
+    <!-- ChatGPT AI Assistant -->
+    <script src="scripts/integrations/chatgpt_integration.js"></script>
+    
+    <!-- Admin Access Bridge (Secure) -->
+    <script src="scripts/ai-systems/admin_access.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Order modal functions
+        function openOrderModal() {
+            document.getElementById('orderModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Enhanced add to order function with direct SkyTab linking
+        function addToOrder(itemId, itemName) {
+            // Handle both single and double parameter calls
+            if (!itemName) {
+                itemName = itemId; // If only one parameter provided, use it as the name
+            }
+            
+            // Comprehensive map of all menu items
+            const skyTabItemMap = {
+                // Premium Burgers
+                'royale-classic': { name: 'The Royale Classic', price: '$16.99', category: 'signature-burgers', search: 'classic burger' },
+                'truffle-deluxe': { name: 'Truffle Deluxe', price: '$24.99', category: 'premium-burgers', search: 'truffle' },
+                'bbq-smokehouse': { name: 'BBQ Smokehouse', price: '$18.99', category: 'specialty-burgers', search: 'bbq' },
+                
+                // Our Signature Burgers (with optimized images)
+                'Just A Burger': { name: 'Just A Burger', price: '$10.00', category: 'signature-burgers', search: 'just a burger' },
+                'Beirut': { name: 'Beirut Mediterranean Burger', price: '$12.00', category: 'signature-burgers', search: 'beirut mediterranean' },
+                'Mia Wallace': { name: 'Mia Wallace BBQ Burger', price: '$13.00', category: 'signature-burgers', search: 'mia wallace bbq' },
+                'Havana': { name: 'Havana Breakfast Burger', price: '$14.00', category: 'signature-burgers', search: 'havana breakfast' },
+                'Kruncher': { name: 'Kruncher Spicy Burger', price: '$12.50', category: 'signature-burgers', search: 'kruncher spicy' },
+                
+                // Signature Chicken Sandwiches (with optimized images)
+                'Vincent Vega': { name: 'Vincent Vega Classic Fried Chicken', price: '$12.00', category: 'chicken-sandwiches', search: 'vincent vega chicken' },
+                'Marsellus Wallace': { name: 'Marsellus Wallace Sweet & Spicy Chicken', price: '$13.00', category: 'chicken-sandwiches', search: 'marsellus wallace spicy chicken' },
+                
+                // Royale Bites (with optimized images)
+                'Nacho Cheese Ravioli': { name: 'Nacho Cheese Ravioli', price: '$8.50', category: 'royale-bites', search: 'nacho cheese ravioli' },
+                'Soft Pretzels': { name: 'Soft Pretzels', price: '$6.00', category: 'royale-bites', search: 'soft pretzels' },
+                'Fried Mac & Cheese': { name: 'Fried Mac & Cheese', price: '$7.50', category: 'royale-bites', search: 'fried mac cheese' },
+                'Royale Fries And Brisket': { name: 'Royale Fries And Brisket', price: '$12.00', category: 'royale-bites', search: 'royale fries brisket' },
+                
+                // Signature Sandwiches (with optimized images)
+                'Southwest Royale Wrap': { name: 'Southwest Royale Wrap', price: '$11.50', category: 'signature-sandwiches', search: 'southwest wrap' },
+                '"All Up In Your Grill" Cheese Sandwich': { name: 'All Up In Your Grill Cheese Sandwich', price: '$9.50', category: 'signature-sandwiches', search: 'grilled cheese' },
+                'Royale "Brisket Sandwich"': { name: 'Royale Brisket Sandwich', price: '$13.50', category: 'signature-sandwiches', search: 'brisket sandwich' },
+                
+                // Salads (with optimized images)
+                'Caesar Salad': { name: 'Caesar Salad', price: '$12.00', category: 'salads', search: 'caesar salad' },
+                'Fairway Salad': { name: 'Fairway Salad', price: '$12.00', category: 'salads', search: 'fairway salad' },
+                
+                // Sides
+                'Tomato Soup': { name: 'Roasted Tomato Basil Soup', price: '$6.50', category: 'sides', search: 'tomato soup' },
+                'Tater Tots': { name: 'Tater Tots', price: '$5.50', category: 'sides', search: 'tater tots' },
+                
+                // Shakes
+                'Vanilla Bean': { name: 'Vanilla Bean Shake', price: '$5.50', category: 'shakes', search: 'vanilla shake' },
+                'Strawberry': { name: 'Strawberry Nesquik Shake', price: '$6.50', category: 'shakes', search: 'strawberry shake' },
+                'Chocolate': { name: 'Chocolate Nesquick Shake', price: '$6.50', category: 'shakes', search: 'chocolate shake' },
+                'Fruity Pebbles': { name: 'Fruity Pebbles Shake', price: '$6.50', category: 'shakes', search: 'fruity pebbles shake' },
+                'Cinmn Toast Crunch': { name: 'Cinnamon Toast Crunch Shake', price: '$6.50', category: 'shakes', search: 'cinnamon toast crunch shake' },
+                'Cap\'n Crunch': { name: 'Cap\'n Crunch Berries Shake', price: '$6.50', category: 'shakes', search: 'capn crunch shake' },
+                'Cookie Butter-Nuttela': { name: 'Cookie Butter & Nutella Shake', price: '$6.50', category: 'shakes', search: 'cookie butter nutella shake' },
+                
+                // Combos
+                'family-pack': { name: 'Family Pack Special', price: '$54.99', category: 'combos', search: 'family pack' },
+                'gameday-combo': { name: 'Game Day Combo', price: '$24.99', category: 'combos', search: 'game day combo' }
+            };
+
+            // Try to find item in map first by exact match, then by partial match
+            let item = skyTabItemMap[itemId] || skyTabItemMap[itemName];
+            
+            // If not found, try to match by name similarity
+            if (!item) {
+                const searchName = (itemName || itemId).toLowerCase();
+                const matchedKey = Object.keys(skyTabItemMap).find(key => 
+                    key.toLowerCase().includes(searchName) || 
+                    searchName.includes(key.toLowerCase()) ||
+                    skyTabItemMap[key].name.toLowerCase().includes(searchName)
+                );
+                if (matchedKey) {
+                    item = skyTabItemMap[matchedKey];
+                }
+            }
+            
+            // If still not found, create a basic item structure
+            if (!item) {
+                item = {
+                    name: itemName || itemId,
+                    price: 'Market Price',
+                    category: 'menu-items',
+                    search: (itemName || itemId).toLowerCase()
+                };
+            }
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'add_to_cart', {
+                    'item_id': itemId,
+                    'item_name': item.name,
+                    'price': item.price.replace('$', ''),
+                    'category': item.category
+                });
+            }
+
+            // Show loading state with enhanced feedback
+            showOrderingState(item.name, item.price);
+            
+            // Open SkyTab with enhanced parameters
+            openOrderModalWithItem(itemId, item);
+            
+            console.log('🍔 Added ' + item.name + ' (' + item.price + ') to SkyTab order system');
+        }
+
+        // Enhanced modal opening with item-specific targeting
+        function openOrderModalWithItem(itemId, itemData) {
+            const modal = document.getElementById('orderModal');
+            const iframe = modal.querySelector('iframe');
+            
+            // Base SkyTab URL
+            let skyTabUrl = 'https://online.skytab.com/ebc41ef450819d2886e60b30173a914d';
+            
+            // Add search parameters if available (SkyTab may support these)
+            if (itemData && itemData.search) {
+                skyTabUrl += `?search=${encodeURIComponent(itemData.search)}`;
+            }
+            
+            // Update iframe source with loading state
+            iframe.src = skyTabUrl;
+            
+            // Update modal header with enhanced item info
+            const modalHeader = modal.querySelector('.bg-gradient-to-r h2');
+            if (itemData) {
+                modalHeader.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span>Order ${itemData.name}</span>
+                        <span class="text-xl font-bold text-yellow-300">${itemData.price}</span>
+                    </div>
+                `;
+            } else {
+                modalHeader.textContent = `Order ${itemId}`;
+            }
+            
+            // Add enhanced loading state
+            iframe.addEventListener('load', function() {
+                // Remove any loading indicators when iframe loads
+                modal.classList.remove('loading');
+            });
+            
+            // Show modal with loading state
+            modal.classList.remove('hidden');
+            modal.classList.add('loading');
+            document.body.style.overflow = 'hidden';
+            
+            // Add item-specific styling and data
+            if (itemData) {
+                modal.setAttribute('data-item', itemId);
+                modal.setAttribute('data-category', itemData.category);
+                modal.setAttribute('data-price', itemData.price);
+            }
+            
+            // Add success feedback after modal opens
+            setTimeout(() => {
+                showSuccessNotification(itemData);
+            }, 500);
+        }
+        
+        // Show success notification for ordering
+        function showSuccessNotification(itemData) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-32 right-4 bg-blue-600 text-white px-6 py-3 rounded-xl shadow-xl z-50 transform translate-x-full transition-transform duration-300';
+            
+            notification.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <div class="text-2xl">🎉</div>
+                    <div>
+                        <div class="font-semibold">${itemData.name} Ready!</div>
+                        <div class="text-sm text-blue-200">Complete your order in SkyTab</div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Auto remove after 4 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 4000);
+        }
+
+        // Show ordering state feedback
+        function showOrderingState(itemName, itemPrice) {
+            // Create and show loading notification
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-20 right-4 bg-green-600 text-white px-6 py-3 rounded-xl shadow-xl z-50 transform translate-x-full transition-transform duration-300';
+            
+            const priceDisplay = itemPrice ? ` (${itemPrice})` : '';
+            notification.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                    <div>
+                        <div class="font-semibold">Loading ${itemName || 'menu item'}${priceDisplay}</div>
+                        <div class="text-sm text-green-200">Opening SkyTab ordering system...</div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/95', 'backdrop-blur-md', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-black/95', 'backdrop-blur-md', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeOrderModal();
+            }
+        });
+
+        // Close modal on backdrop click
+        document.getElementById('orderModal').addEventListener('click', function(e) {
+            if (e.target === e.currentTarget) {
+                closeOrderModal();
+            }
+        });
+
+        // DoorDash Delivery Menu Functions
+        function openDeliveryMenu() {
+            const modal = document.getElementById('deliveryModal');
+            const content = document.getElementById('deliveryMenuContent');
+            
+            // Load DoorDash menu content
+            loadDeliveryMenuContent(content);
+            
+            // Show modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'view_delivery_menu', {
+                    platform: 'doordash',
+                    source: 'delivery_banner'
+                });
+            }
+            
+            console.log('🚗 Opened DoorDash delivery menu');
+        }
+
+        function closeDeliveryMenu() {
+            document.getElementById('deliveryModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function loadDeliveryMenuContent(container) {
+            // Check if DoorDash data is available
+            if (typeof getDoorDashItem !== 'function' || typeof doorDashFeaturedItems === 'undefined') {
+                container.innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4">🚗</div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">DoorDash Delivery Available</h3>
+                        <p class="text-gray-600 mb-6">Order Royale with Cheese for delivery through DoorDash!</p>
+                        <a href="https://www.doordash.com/store/royale-with-cheese-dearborn-heights-1574577/" 
+                           target="_blank" 
+                           onclick="trackDeliveryOrder('general')"
+                           class="bg-orange-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all transform hover:scale-105 shadow-xl">
+                            🍔 Order on DoorDash
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Create featured items grid
+            let featuredHTML = '';
+            
+            if (window.doorDashFeaturedItems && window.doorDashFeaturedItems.length > 0) {
+                featuredHTML = window.doorDashFeaturedItems.map(item => `
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-gray-100"
+                         onclick="orderFromDoorDash('${item.name}', '${item.doordash_url}')">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="${item.name}" class="w-full h-48 object-cover">
+                            ${item.rating ? `
+                                <div class="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                    ${item.rating}
+                                </div>
+                            ` : ''}
+                            ${item.ranking ? `
+                                <div class="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                    ${item.ranking}
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">${item.name}</h4>
+                            <p class="text-gray-600 text-sm mb-3">${item.description || 'Available for delivery through DoorDash'}</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-orange-600 font-bold">Order on DoorDash →</span>
+                                ${item.category ? `<span class="text-xs text-gray-500">${item.category}</span>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            container.innerHTML = `
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">🌟 Featured Items on DoorDash</h3>
+                    <p class="text-gray-600">Our most popular items available for delivery with ratings and reviews</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    ${featuredHTML}
+                </div>
+                
+                <div class="text-center bg-orange-50 rounded-2xl p-6">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Want to see the full menu?</h4>
+                    <p class="text-gray-600 mb-4">Visit our DoorDash page to browse all available items and place your order</p>
+                    <a href="https://www.doordash.com/store/royale-with-cheese-dearborn-heights-1574577/" 
+                       target="_blank" 
+                       onclick="trackDeliveryOrder('full_menu')"
+                       class="bg-orange-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg">
+                        🍔 View Full DoorDash Menu
+                    </a>
+                </div>
+            `;
+        }
+
+        function orderFromDoorDash(itemName, doorDashUrl) {
+            // Track the order attempt
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'add_to_cart', {
+                    item_name: itemName,
+                    platform: 'doordash',
+                    source: 'delivery_popup'
+                });
+            }
+            
+            // Show loading notification
+            showDeliveryOrderingState(itemName);
+            
+            // Open DoorDash link
+            setTimeout(() => {
+                window.open(doorDashUrl, '_blank');
+            }, 500);
+            
+            console.log(`🚗 Ordering ${itemName} from DoorDash`);
+        }
+
+        function trackDeliveryOrder(type) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click_delivery_link', {
+                    link_type: type,
+                    platform: 'doordash'
+                });
+            }
+        }
+
+        function showDeliveryOrderingState(itemName) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-20 right-4 bg-orange-500 text-white px-6 py-3 rounded-xl shadow-xl z-50 transform translate-x-full transition-transform duration-300';
+            notification.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <div class="text-xl">🚗</div>
+                    <span>Opening ${itemName} on DoorDash...</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Close delivery modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDeliveryMenu();
+            }
+        });
+
+        // Close delivery modal on backdrop click
+        document.getElementById('deliveryModal').addEventListener('click', function(e) {
+            if (e.target === e.currentTarget) {
+                closeDeliveryMenu();
+            }
+        });
+
+        // Franchise Form Functions
+        function openFranchiseForm() {
+            const modal = document.getElementById('franchiseModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'franchise_form_open', {
+                    source: 'franchise_section'
+                });
+            }
+            
+            console.log('👑 Opened franchise inquiry form');
+        }
+
+        function closeFranchiseForm() {
+            document.getElementById('franchiseModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            
+            // Reset form
+            document.getElementById('franchiseForm').reset();
+        }
+
+        function submitFranchiseForm(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const franchiseData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                location: formData.get('location') || 'Not specified',
+                experience: formData.get('experience') || 'Not specified',
+                timestamp: new Date().toISOString(),
+                source: 'website_franchise_form'
+            };
+            
+            // Show loading state
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'franchise_form_submit', {
+                    form_type: 'franchise_inquiry',
+                    experience_level: franchiseData.experience
+                });
+            }
+            
+            // Simulate form submission (replace with your backend endpoint)
+            setTimeout(() => {
+                // Show success message
+                showFranchiseSuccessMessage(franchiseData);
+                
+                // Reset form and close modal
+                closeFranchiseForm();
+                
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                console.log('👑 Franchise inquiry submitted:', franchiseData);
+            }, 2000);
+        }
+
+        function showFranchiseSuccessMessage(data) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-20 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-4 rounded-xl shadow-xl z-50 max-w-md transform translate-x-full transition-transform duration-300';
+            notification.innerHTML = `
+                <div class="flex items-start space-x-3">
+                    <div class="text-2xl">👑</div>
+                    <div>
+                        <div class="font-bold text-lg">Welcome to the Empire!</div>
+                        <div class="text-green-100 text-sm">Thanks ${data.name}! We'll contact you within 24 hours to discuss franchise opportunities.</div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Auto remove after 8 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 8000);
+        }
+
+        // Close franchise modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeFranchiseForm();
+            }
+        });
+
+        // Close franchise modal on backdrop click
+        document.getElementById('franchiseModal').addEventListener('click', function(e) {
+            if (e.target === e.currentTarget) {
+                closeFranchiseForm();
+            }
+        });
+
+        // Dynamic Action Button Functions
+        function getDirections() {
+            const address = "4163 Cass Ave, Detroit, MI 48201";
+            const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'get_directions', {
+                    address: address,
+                    source: 'hero_action_box'
+                });
+            }
+            
+            window.open(googleMapsUrl, '_blank');
+            showActionNotification('📍 Opening directions to Royale with Cheese...', 'blue');
+            console.log('📍 Directions requested to:', address);
+        }
+
+        function callStore() {
+            const phone = "tel:+13133153014";
+            const displayPhone = "(313) 315-3014";
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_call', {
+                    phone: displayPhone,
+                    source: 'hero_action_box'
+                });
+            }
+            
+            window.location.href = phone;
+            showActionNotification(`📞 Calling ${displayPhone}...`, 'blue');
+            console.log('📞 Initiating call to:', displayPhone);
+        }
+
+        function handleOrderNow() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+            
+            // Restaurant hours: 7 AM to 10 PM (22:00)
+            const isOpen = currentHour >= 7 && currentHour < 22;
+            
+            if (isOpen) {
+                // Open - redirect to ordering system
+                scrollToSection('menu');
+                showActionNotification('🍔 Redirecting to our delicious menu...', 'green');
+                
+                // Analytics tracking
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'order_now_click', {
+                        status: 'open',
+                        time: currentHour,
+                        source: 'hero_button'
+                    });
+                }
+            } else {
+                // Closed - show pre-order option
+                showPreOrderModal();
+                
+                // Analytics tracking
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'pre_order_click', {
+                        status: 'closed',
+                        time: currentHour,
+                        source: 'hero_button'
+                    });
+                }
+            }
+        }
+
+        function orderSpecial() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+            let specialType = 'lunch';
+            let specialName = 'Quick Pickup Lunch Combos';
+            
+            // Determine meal period
+            if (currentHour >= 6 && currentHour < 11) {
+                specialType = 'breakfast';
+                specialName = 'Royal Breakfast Burger Special';
+            } else if (currentHour >= 11 && currentHour < 16) {
+                specialType = 'lunch';
+                specialName = 'Quick Pickup Lunch Combos';
+            } else if (currentHour >= 16 && currentHour < 21) {
+                specialType = 'dinner';
+                specialName = 'Family Combo Deals';
+            } else {
+                specialType = 'latenight';
+                specialName = 'Late Night Menu';
+            }
+            
+            scrollToSection('menu');
+            showActionNotification(`🍔 Showing ${specialName}...`, 'orange');
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'order_special', {
+                    special_type: specialType,
+                    special_name: specialName,
+                    time: currentHour
+                });
+            }
+            
+            console.log(`🍔 Ordered ${specialType} special:`, specialName);
+        }
+
+        function signUpRewards() {
+            // Show rewards signup modal
+            showRewardsSignupModal();
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'rewards_signup_click', {
+                    source: 'hero_action_box'
+                });
+            }
+            
+            console.log('🎉 Royal Rewards signup initiated');
+        }
+
+        function showActionNotification(message, color = 'blue') {
+            const notification = document.createElement('div');
+            const colorClasses = {
+                blue: 'from-blue-500 to-blue-600',
+                green: 'from-green-500 to-green-600',
+                orange: 'from-orange-500 to-orange-600',
+                purple: 'from-purple-500 to-purple-600'
+            };
+            
+            notification.className = `fixed top-20 right-4 bg-gradient-to-r ${colorClasses[color]} text-white px-6 py-3 rounded-xl shadow-xl z-50 transform translate-x-full transition-transform duration-300`;
+            notification.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <span class="font-semibold">${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        function showPreOrderModal() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🌙</div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">We're Currently Closed</h3>
+                        <p class="text-gray-600 mb-6">We reopen tomorrow at 7:00 AM! Schedule your order now for pickup or delivery.</p>
+                        
+                        <div class="space-y-3">
+                            <button onclick="schedulePickup()" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-xl font-semibold transition-all">
+                                📋 Schedule Pickup for 7 AM
+                            </button>
+                            <button onclick="scheduleDelivery()" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold transition-all">
+                                🚗 Schedule Delivery for 7 AM
+                            </button>
+                            <button onclick="closePreOrderModal()" class="w-full border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-xl font-semibold hover:bg-gray-50 transition-all">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            
+            // Add close functions to window for the modal buttons
+            window.closePreOrderModal = function() {
+                document.body.removeChild(modal);
+                document.body.style.overflow = 'auto';
+            };
+            
+            window.schedulePickup = function() {
+                showActionNotification('📋 Pickup scheduled for 7 AM tomorrow!', 'green');
+                closePreOrderModal();
+            };
+            
+            window.scheduleDelivery = function() {
+                showActionNotification('🚗 Delivery scheduled for 7 AM tomorrow!', 'blue');
+                closePreOrderModal();
+            };
+        }
+
+        function showRewardsSignupModal() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">👑</div>
+                        <h3 class="text-2xl font-bold text-purple-600 mb-4">Join Royal Rewards!</h3>
+                        <p class="text-gray-600 mb-6">Earn points on every order, get exclusive deals, and unlock VIP perks!</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="font-semibold text-purple-700">🎁 Welcome Bonus</div>
+                                <div class="text-sm text-purple-600">Get a free appetizer on your first order!</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="font-semibold text-purple-700">⭐ Earn Points</div>
+                                <div class="text-sm text-purple-600">1 point per $1 spent • 100 points = $10 reward</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <button onclick="completeRewardsSignup()" class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-6 rounded-xl font-semibold transition-all">
+                                🎉 Join Now - It's Free!
+                            </button>
+                            <button onclick="closeRewardsModal()" class="w-full border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-xl font-semibold hover:bg-gray-50 transition-all">
+                                Maybe Later
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            
+            // Add close functions to window for the modal buttons
+            window.closeRewardsModal = function() {
+                document.body.removeChild(modal);
+                document.body.style.overflow = 'auto';
+            };
+            
+            window.completeRewardsSignup = function() {
+                showActionNotification('🎉 Welcome to Royal Rewards! Check your email for your welcome bonus!', 'purple');
+                closeRewardsModal();
+            };
+        }
+
+        // Update dynamic content based on time
+        function updateDynamicContent() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+            
+            // Update restaurant status
+            const isOpen = currentHour >= 7 && currentHour < 22;
+            const statusBox = document.getElementById('statusBox');
+            const statusTitle = document.getElementById('statusTitle');
+            const orderButton = document.getElementById('orderButton');
+            const heroOrderButton = document.getElementById('heroOrderButton');
+            const heroOrderIcon = document.getElementById('heroOrderIcon');
+            const heroOrderText = document.getElementById('heroOrderText');
+            
+            if (isOpen) {
+                // Open status
+                statusBox.className = statusBox.className.replace('bg-red-600/20', 'bg-green-600/20').replace('border-red-400/30', 'border-green-400/30');
+                statusTitle.textContent = "We're Open";
+                statusTitle.className = statusTitle.className.replace('text-red-300', 'text-green-300');
+                orderButton.textContent = "Order Now";
+                orderButton.className = orderButton.className.replace('bg-red-500', 'bg-green-500').replace('hover:bg-red-600', 'hover:bg-green-600');
+                
+                if (heroOrderIcon) heroOrderIcon.textContent = "🟢";
+                if (heroOrderText) heroOrderText.textContent = "Order Now - We're Open!";
+            } else {
+                // Closed status  
+                statusBox.className = statusBox.className.replace('bg-green-600/20', 'bg-red-600/20').replace('border-green-400/30', 'border-red-400/30');
+                statusTitle.textContent = "We're Closed";
+                statusTitle.className = statusTitle.className.replace('text-green-300', 'text-red-300');
+                orderButton.textContent = "Pre-Order for 7 AM";
+                orderButton.className = orderButton.className.replace('bg-green-500', 'bg-red-500').replace('hover:bg-green-600', 'hover:bg-red-600');
+                
+                if (heroOrderIcon) heroOrderIcon.textContent = "🔴";
+                if (heroOrderText) heroOrderText.textContent = "Pre-Order for Tomorrow";
+            }
+            
+            // Update meal period
+            const mealIcon = document.getElementById('mealIcon');
+            const mealPeriod = document.getElementById('mealPeriod');
+            
+            if (currentHour >= 6 && currentHour < 11) {
+                if (mealIcon) mealIcon.textContent = "🌅";
+                if (mealPeriod) mealPeriod.textContent = "Breakfast";
+            } else if (currentHour >= 11 && currentHour < 16) {
+                if (mealIcon) mealIcon.textContent = "🍔";
+                if (mealPeriod) mealPeriod.textContent = "Lunch Rush";
+            } else if (currentHour >= 16 && currentHour < 21) {
+                if (mealIcon) mealIcon.textContent = "🍽️";
+                if (mealPeriod) mealPeriod.textContent = "Dinner Time";
+            } else {
+                if (mealIcon) mealIcon.textContent = "🌙";
+                if (mealPeriod) mealPeriod.textContent = "Late Night";
+            }
+        }
+
+        // Simplified mobile menu functions
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const isOpen = mobileMenu.classList.contains('open');
+            
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        }
+        
+        function openMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const body = document.body;
+            
+            // Lock body scroll
+            body.classList.add('mobile-menu-open');
+            
+            // Show mobile menu
+            mobileMenu.classList.add('open');
+            
+            console.log('📱 Mobile menu opened');
+        }
+        
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const body = document.body;
+            
+            // Hide mobile menu
+            mobileMenu.classList.remove('open');
+            
+            // Restore body scroll
+            body.classList.remove('mobile-menu-open');
+            
+            console.log('📱 Mobile menu closed');
+        }
+        
+        // Combined function to scroll to section and close menu
+        function scrollToSectionAndClose(sectionId) {
+            closeMobileMenu();
+            
+            // Wait for menu close animation to complete
+            setTimeout(() => {
+                scrollToSection(sectionId);
+            }, 300);
+        }
+        
+        // Smooth scroll function for mobile navigation
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const offset = 80; // Account for fixed navbar
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Enhanced touch feedback for mobile
+        function addTouchFeedback() {
+            if ('ontouchstart' in window) {
+                // Add touch start/end listeners for better mobile feedback
+                document.addEventListener('touchstart', function(e) {
+                    if (e.target.closest('.order-button, button, [onclick]')) {
+                        e.target.closest('.order-button, button, [onclick]').style.transform = 'scale(0.95)';
+                    }
+                });
+                
+                document.addEventListener('touchend', function(e) {
+                    if (e.target.closest('.order-button, button, [onclick]')) {
+                        setTimeout(() => {
+                            e.target.closest('.order-button, button, [onclick]').style.transform = '';
+                        }, 150);
+                    }
+                });
+            }
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🍔👑 Royale with Cheese website loaded successfully!');
+            console.log('🎯 Dynamic action buttons activated!');
+            console.log('🚗 DoorDash delivery menu integration ready!');
+            console.log('👑 Franchise inquiry system ready!');
+            console.log('📱 Mobile optimizations loaded!');
+            
+            // Initialize mobile enhancements
+            addTouchFeedback();
+            
+            // Update dynamic content immediately
+            updateDynamicContent();
+            
+            // Update dynamic content every minute
+            setInterval(updateDynamicContent, 60000);
+            
+            // Prevent default link behavior for mobile menu navigation
+            document.querySelectorAll('#mobileMenu a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                });
+            });
+            
+            // Handle escape key to close mobile menu
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    if (mobileMenu.classList.contains('open')) {
+                        closeMobileMenu();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

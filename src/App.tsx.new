@@ -1,0 +1,32 @@
+import React from 'react';
+import Hero from './components/Hero';
+import OutageNotification from './components/OutageNotification';
+import './App.css';
+
+// SEO Pages - These are separate and don't affect main flow
+import BurgersPage from './pages/menu/BurgersPage';
+import SidesPage from './pages/menu/SidesPage';
+import ShakesPage from './pages/menu/ShakesPage';
+import CateringPage from './pages/CateringPage';
+
+function App() {
+  // Check if we're on a specific SEO page route
+  const path = window.location.pathname;
+  
+  // SEO Pages - completely separate from main site flow
+  if (path === '/menu/burgers') return <BurgersPage />;
+  if (path === '/menu/sides') return <SidesPage />;
+  if (path === '/menu/shakes') return <ShakesPage />;
+  if (path === '/catering') return <CateringPage />;
+  
+  // DEFAULT: Your original site flow remains exactly the same
+  return (
+    <div className="App">
+      <OutageNotification />
+      <Hero />
+      {/* Other components would go here - keeping exact same flow */}
+    </div>
+  );
+}
+
+export default App;
