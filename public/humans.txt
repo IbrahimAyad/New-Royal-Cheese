@@ -1,0 +1,14 @@
+/* TEAM */
+Restaurant: Royale with Cheese
+Location: Detroit, Michigan, USA
+Address: 4163 Cass Ave, Detroit, MI 48201
+
+/* THANKS */
+Inspiration: Pulp Fiction (1994)
+Community: Midtown Detroit
+
+/* SITE */
+Last update: 2025-01-28
+Standards: HTML5, CSS3, JavaScript
+Components: React, Tailwind CSS
+Tools: Create React App

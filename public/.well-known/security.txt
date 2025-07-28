@@ -1,0 +1,4 @@
+Contact: mailto:security@royalewithcheese.menu
+Expires: 2026-01-28T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://royalewithcheese.menu/.well-known/security.txt

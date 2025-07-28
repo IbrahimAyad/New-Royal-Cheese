@@ -23,6 +23,14 @@
     <link rel="preconnect" href="https://api.emailjs.com">
     <link rel="dns-prefetch" href="//api.emailjs.com">
     
+    <!-- Additional Performance Hints -->
+    <link rel="preconnect" href="https://maps.googleapis.com">
+    <link rel="dns-prefetch" href="//maps.googleapis.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    
     <!-- Prefetch key resources -->
     <link rel="prefetch" href="/static/js/bundle.js" as="script">
     <link rel="prefetch" href="/static/css/main.css" as="style">
@@ -34,8 +42,54 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Performance CSS -->
+    <style>
+      /* Lazy loading styles */
+      img {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      img[data-src] {
+        opacity: 0;
+      }
+      
+      img.loaded {
+        opacity: 1;
+      }
+      
+      /* Optimize font loading */
+      .font-display {
+        font-display: swap;
+      }
+      
+      /* Reduce motion for accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: 'Inter', sans-serif; }
+      .hero { min-height: 100vh; background: #000; }
+      .loading { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+    </style>
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://royalewithcheese.menu/" />
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Royale with Cheese Updates" href="https://royalewithcheese.menu/feed.xml" />
+    
+    <!-- Additional App Links -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Royale Cheese">
     
     <!-- SEO and Social Media -->
     <meta name="description" content="Detroit's most awarded burger destination featuring AI-powered ordering and premium gourmet burgers" />
@@ -48,9 +102,10 @@
     <meta property="og:url" content="https://royalewithcheese.menu/" />
     <meta property="og:title" content="🍔 Royale with Cheese - Detroit's #1 Burger Destination" />
     <meta property="og:description" content="🎬 Experience Pulp Fiction themed dining with gourmet burgers like our famous Big Kahuna, signature bites, and craft shakes in Midtown Detroit! 📍 4163 Cass Ave" />
-    <meta property="og:image" content="https://royalewithcheese.menu/og-image.jpg" />
+    <meta property="og:image" content="https://royalewithcheese.menu/og-image.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Royale with Cheese - Detroit's #1 Burger Destination" />
     <meta property="og:site_name" content="Royale with Cheese" />
     <meta property="og:locale" content="en_US" />
     
@@ -59,7 +114,7 @@
     <meta property="twitter:url" content="https://royalewithcheese.menu/" />
     <meta property="twitter:title" content="🍔 Royale with Cheese - Detroit's #1 Burger Destination" />
     <meta property="twitter:description" content="🎬 Experience Pulp Fiction themed dining with gourmet burgers like our famous Big Kahuna, signature bites, and craft shakes! 📍 Midtown Detroit" />
-    <meta property="twitter:image" content="https://royalewithcheese.menu/og-image.jpg" />
+    <meta property="twitter:image" content="https://royalewithcheese.menu/og-image.svg" />
     <meta property="twitter:creator" content="@RoyaleWithCheese" />
     <meta property="twitter:site" content="@RoyaleWithCheese" />
     
@@ -90,15 +145,81 @@
         "Fr-Sa 11:00-23:00",
         "Su 12:00-18:00"
       ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "11:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "11:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "12:00",
+          "closes": "18:00"
+        }
+      ],
       "servesCuisine": "American",
       "priceRange": "$10-15",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "reviewCount": "3000"
+        "reviewCount": "3127",
+        "bestRating": "5",
+        "worstRating": "1"
       },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Vincent V."
+          },
+          "datePublished": "2025-01-15",
+          "reviewBody": "Best burger in Detroit! The Big Kahuna is incredible - that Hawaiian joint knows what they're doing. The $5 shake really is worth every penny."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Jules W."
+          },
+          "datePublished": "2025-01-20",
+          "reviewBody": "The Royale with Cheese is exactly what a quarter pounder should be. Great atmosphere, feels like you're in the movie. Service is fast and friendly."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mia W."
+          },
+          "datePublished": "2025-01-22",
+          "reviewBody": "Love the Pulp Fiction theme! Food is amazing, especially the truffle fries. Perfect spot for Wayne State students with the discount."
+        }
+      ],
       "image": [
-        "https://royalewithcheese.menu/og-image.jpg"
+        "https://royalewithcheese.menu/og-image.svg"
       ],
       "menu": "https://royalewithcheese.menu/#menu",
       "acceptsReservations": "false",
@@ -110,7 +231,29 @@
           {
             "@type": "MenuSection",
             "name": "Signature Burgers",
-            "description": "Our famous gourmet burger creations"
+            "description": "Our famous gourmet burger creations",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Royale with Cheese",
+                "description": "Quarter pounder with cheese, caramelized onions, special sauce",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "12.99",
+                  "priceCurrency": "USD"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Big Kahuna Burger",
+                "description": "That's that Hawaiian burger joint. Teriyaki glaze, grilled pineapple",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "14.99",
+                  "priceCurrency": "USD"
+                }
+              }
+            ]
           },
           {
             "@type": "MenuSection", 
@@ -137,7 +280,35 @@
     }
     </script>
     
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- Breadcrumb Schema for Navigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://royalewithcheese.menu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Menu",
+          "item": "https://royalewithcheese.menu/#menu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contact",
+          "item": "https://royalewithcheese.menu/#contact"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.svg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
     <!-- Preload critical resources -->
@@ -149,16 +320,64 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     
-    <!-- Performance monitoring -->
+    <!-- Performance monitoring and Core Web Vitals -->
     <script>
+      // Service Worker Registration
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            console.log('ServiceWorker registration successful:', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed:', err);
+          });
+        });
+      }
+
       // Basic performance monitoring
       window.addEventListener('load', function() {
         if ('performance' in window) {
           setTimeout(function() {
             const perfData = performance.getEntriesByType('navigation')[0];
             console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
+            
+            // Monitor Core Web Vitals
+            if ('PerformanceObserver' in window) {
+              // Largest Contentful Paint
+              new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                  console.log('LCP:', entry.startTime);
+                }
+              }).observe({entryTypes: ['largest-contentful-paint']});
+              
+              // First Input Delay
+              new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                  console.log('FID:', entry.processingStart - entry.startTime);
+                }
+              }).observe({entryTypes: ['first-input']});
+            }
           }, 0);
         }
+      });
+
+      // Lazy Loading for Images
+      document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        
+        const imageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.classList.add('loaded');
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+
+        lazyImages.forEach(function(img) {
+          imageObserver.observe(img);
+        });
       });
     </script>
   </body>

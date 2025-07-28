@@ -1,0 +1,9 @@
+# Royale with Cheese - Authorized Digital Sellers
+# https://royalewithcheese.menu/ads.txt
+# Contact: advertising@royalewithcheese.menu
+
+# Google AdSense (example - replace with your publisher ID)
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Direct advertising contacts
+# For direct advertising opportunities, contact: marketing@royalewithcheese.menu

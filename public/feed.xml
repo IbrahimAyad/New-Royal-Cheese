@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Royale with Cheese - Detroit's #1 Burger Destination</title>
+    <link>https://royalewithcheese.menu</link>
+    <description>Updates from Royale with Cheese - Pulp Fiction themed restaurant featuring gourmet burgers, craft shakes, and signature bites in Midtown Detroit</description>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://royalewithcheese.menu/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Now Open in Midtown Detroit!</title>
+      <link>https://royalewithcheese.menu</link>
+      <description>We're excited to announce that Royale with Cheese is now open at 4163 Cass Ave in Midtown Detroit! Experience our famous Big Kahuna Burger and $5 Shake in a Pulp Fiction themed atmosphere.</description>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://royalewithcheese.menu/news/grand-opening</guid>
+    </item>
+    
+    <item>
+      <title>Happy Hour Special - 3-6 PM Daily</title>
+      <link>https://royalewithcheese.menu/specials/happy-hour</link>
+      <description>Join us for Happy Hour! Get 20% off all burgers and $2 off craft shakes Monday through Friday, 3-6 PM. The perfect way to experience Detroit's best burgers!</description>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://royalewithcheese.menu/specials/happy-hour-announcement</guid>
+    </item>
+    
+    <item>
+      <title>Student Discount - 15% Off with Valid ID</title>
+      <link>https://royalewithcheese.menu/specials/student-discount</link>
+      <description>Wayne State students get 15% off their entire order with valid student ID. Fuel your studies with our gourmet burgers and shakes!</description>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://royalewithcheese.menu/specials/student-discount-announcement</guid>
+    </item>
+  </channel>
+</rss>
