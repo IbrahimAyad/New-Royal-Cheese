@@ -255,8 +255,8 @@ const SimpleWebsite = () => {
                 <div className="bg-gray-800 rounded-2xl p-6">
                   <h4 className="text-xl font-bold mb-2 text-white">📞 Phone</h4>
                   <p className="text-gray-300 text-lg">
-                    <a href="tel:313-315-3014" className="hover:text-red-400 transition-colors">
-                      (313) 315-3014
+                    <a href="tel:313-525-2424" className="hover:text-red-400 transition-colors">
+                      (313) 525-2424
                     </a>
                   </p>
                 </div>
@@ -342,7 +342,7 @@ const SimpleWebsite = () => {
               <h4 className="text-lg font-bold mb-4 text-white">Contact Info</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>📍 4163 Cass Ave, Detroit, MI 48201</li>
-                <li>📞 <a href="tel:313-315-3014" className="hover:text-red-400 transition-colors">(313) 315-3014</a></li>
+                <li>📞 <a href="tel:313-525-2424" className="hover:text-red-400 transition-colors">(313) 525-2424</a></li>
                 <li>✉️ info@royalewithcheese.menu</li>
               </ul>
             </div>

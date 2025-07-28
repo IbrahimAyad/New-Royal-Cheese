@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from './components/Hero';
+import CompleteWebsite from './components/CompleteWebsite';
 import OutageNotification from './components/OutageNotification';
 import './App.css';
 
@@ -7,8 +7,7 @@ function App() {
   return (
     <div className="App">
       <OutageNotification />
-      <Hero />
-      {/* Other components would go here */}
+      <CompleteWebsite />
     </div>
   );
 }
